@@ -8,9 +8,9 @@
     "express": "^4.14.0",
     "govuk-elements-sass": "^1.2.1",
     "govuk-template-marko": "gunjam/govuk-template-marko",
-    "lasso": "^2.5.3",
+    "lasso": "^2.5.5",
     "lasso-sass": "^1.1.9",
-    "marko": "^3.5.0",
+    "marko": "^3.7.1",
     "marko-layout": "^2.0.2"
   },
   "devDependencies": {
