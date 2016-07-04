@@ -1,40 +1,47 @@
+<i18n-var/>
 <layout-use('govuk-template-marko/template.marko')
   header-class="with-proposition"
-  logo-link-title="Go to the GOV.UK homepage"
+  logo-link-title=i18n('app:logoLinkTitle')
   homepage-url="https://www.gov.uk"
   package-path=(require.resolve("./browser.json"))>
 
+  <!-- Page Title -->
   <layout-put into="page-title">
     <layout-placeholder name="page-title"/>
   </layout-put>
 
+  <!-- End of GOV.UK <head/> tag -->
   <layout-put into="head">
     <lasso-head/>
   </layout-put>
 
+  <!-- Cookie message at top of page -->
   <layout-put into="cookie-message">
     <p>
-      GOV.UK uses cookies to make the site simpler.
-      <a href="#">Find out more about cookies</a>
+      <i18n-message key="app:cookieMessage" link-start="<a href='/cookies'>"
+        link-end="</a>"/>
     </p>
   </layout-put>
 
+  <!-- Skip link content -->
   <layout-put into="skip-link-message">
-    Skip to main content
+    <i18n-message key="app:skipLink"/>
   </layout-put>
 
+  <!-- Black header section of GOV.UK template -->
   <layout-put into="proposition-header">
     <div class="header-proposition">
       <div class="content">
         <nav id="proposition-menu">
           <a href="/" id="proposition-name">
-            DWP Marko Test
+            <i18n-message key="app:serviceName"/>
           </a>
         </nav>
       </div>
     </div>
   </layout-put>
 
+  <!-- Main body content -->
   <layout-put into="content">
     <main id="content" role="main" class="group" data-journey=data.journey>
       <div class="grid-row">
@@ -45,36 +52,52 @@
     </main>
   </layout-put>
 
+  <!-- End of GOV.UK tempalte <body/> tag -->
   <layout-put into="body-end">
     <lasso-body/>
   </layout-put>
 
+  <!-- Grey footer links section of GOV.UK template -->
   <layout-put into="footer-support-links">
     <h2 class="visuallyhidden">
-      Support links
+      <i18n-message key="app:footer.supportLinks"/>
     </h2>
     <ul>
       <li>
-        Made in Newcastle by the
-        <a href="https://dwpdigital.blog.gov.uk/">
-          Department for Work and Pensions
+        <a href="/cookies">
+          <i18n-message key="app:footer.cookies"/>
         </a>
+      </li>
+      <li>
+        <a href="https://www.gov.uk/government/organisations/department-for-work-pensions/about/personal-information-charter">
+          <i18n-message key="app:footer.privacy"/>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.gov.uk/done/find-pension-contact-details">
+          <i18n-message key="app:footer.feedback"/>
+        </a>
+      </li>
+      <li>
+        <i18n-message key="app:footer.madeInNewcastle"
+          link-start="<a href='https://dwpdigital.blog.gov.uk/'>"
+          link-end="</a>"/>
       </li>
     </ul>
   </layout-put>
 
+  <!-- OGL licence of footer in GOV.UK template -->
   <layout-put into="licence-message">
     <p>
-      All content is available under the
-      <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">
-        Open Government Licence v3.0
-      </a>
-      , except where otherwise stated
+      <i18n-message key="app:footer.availableUnderOgl"
+        link-start="<a href='https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/' rel='license'>"
+        link-end="</a>"/>
     </p>
   </layout-put>
 
+  <!-- Copyright content in GOV.UK template footer -->
   <layout-put into="crown-copyright-message">
-    © Crown copyright
+    © <i18n-message key="app:footer.copyright"/>
   </layout-put>
 
 </layout-use>

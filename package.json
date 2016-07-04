@@ -5,9 +5,13 @@
   "dependencies": {
     "compression": "^1.6.2",
     "dwp-marko-components": "gunjam/dwp-marko-components",
+    "dwp-i18next-narko-components": "gunjam/dwp-i18next-narko-components",
     "express": "^4.14.0",
     "govuk-elements-sass": "^1.2.1",
     "govuk-template-marko": "gunjam/govuk-template-marko",
+    "i18next": "^3.3.1",
+    "i18next-express-middleware": "^1.0.1",
+    "i18next-node-fs-backend": "^0.1.2",
     "lasso": "^2.5.5",
     "lasso-sass": "^1.1.9",
     "marko": "^3.7.1",
