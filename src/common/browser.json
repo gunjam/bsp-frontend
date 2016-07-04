@@ -1,0 +1,10 @@
+{
+  "dependencies": [
+    "./application.scss",
+    { "type": "js", "url": "https://code.jquery.com/jquery-1.12.4.min.js", "external": false },
+    "govuk_frontend_toolkit/javascripts/vendor/polyfills/bind.js",
+    "govuk_frontend_toolkit/javascripts/govuk/selection-buttons.js",
+    { "type": "js", "url": "https://raw.githubusercontent.com/alphagov/govuk_elements/master/public/javascripts/vendor/details.polyfill.js", "external": false },
+    { "type": "js", "url": "https://raw.githubusercontent.com/alphagov/govuk_elements/master/public/javascripts/application.js", "external": false }
+  ]
+}

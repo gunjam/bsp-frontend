@@ -1,0 +1,80 @@
+<layout-use('govuk-template-marko/template.marko')
+  header-class="with-proposition"
+  logo-link-title="Go to the GOV.UK homepage"
+  homepage-url="https://www.gov.uk"
+  package-path=(require.resolve("./browser.json"))>
+
+  <layout-put into="page-title">
+    <layout-placeholder name="page-title"/>
+  </layout-put>
+
+  <layout-put into="head">
+    <lasso-head/>
+  </layout-put>
+
+  <layout-put into="cookie-message">
+    <p>
+      GOV.UK uses cookies to make the site simpler.
+      <a href="#">Find out more about cookies</a>
+    </p>
+  </layout-put>
+
+  <layout-put into="skip-link-message">
+    Skip to main content
+  </layout-put>
+
+  <layout-put into="proposition-header">
+    <div class="header-proposition">
+      <div class="content">
+        <nav id="proposition-menu">
+          <a href="/" id="proposition-name">
+            DWP Marko Test
+          </a>
+        </nav>
+      </div>
+    </div>
+  </layout-put>
+
+  <layout-put into="content">
+    <main id="content" role="main" class="group" data-journey=data.journey>
+      <div class="grid-row">
+        <div class="column-two-thirds">
+          <layout-placeholder name="content"/>
+        </div>
+      </div>
+    </main>
+  </layout-put>
+
+  <layout-put into="body-end">
+    <lasso-body/>
+  </layout-put>
+
+  <layout-put into="footer-support-links">
+    <h2 class="visuallyhidden">
+      Support links
+    </h2>
+    <ul>
+      <li>
+        Made in Newcastle by the
+        <a href="https://dwpdigital.blog.gov.uk/">
+          Department for Work and Pensions
+        </a>
+      </li>
+    </ul>
+  </layout-put>
+
+  <layout-put into="licence-message">
+    <p>
+      All content is available under the
+      <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">
+        Open Government Licence v3.0
+      </a>
+      , except where otherwise stated
+    </p>
+  </layout-put>
+
+  <layout-put into="crown-copyright-message">
+    © Crown copyright
+  </layout-put>
+
+</layout-use>

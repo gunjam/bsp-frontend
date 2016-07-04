@@ -1,0 +1,30 @@
+{
+  "name": "dwp-marko-example",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "compression": "^1.6.2",
+    "dwp-marko-components": "gunjam/dwp-marko-components",
+    "express": "^4.14.0",
+    "govuk-elements-sass": "^1.2.1",
+    "govuk-template-marko": "gunjam/govuk-template-marko",
+    "lasso": "^2.5.3",
+    "lasso-sass": "^1.1.9",
+    "marko": "^3.5.0",
+    "marko-layout": "^2.0.2"
+  },
+  "devDependencies": {
+    "xo": "^0.16.0"
+  },
+  "xo": {
+    "space": true,
+    "esnext": true,
+    "env": [
+      "node"
+    ],
+    "ignores": [
+      "static/**",
+      "**/*.marko.js"
+    ]
+  }
+}
