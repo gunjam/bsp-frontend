@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "body-parser": "^1.15.2",
     "compression": "^1.6.2",
-    "dwp-marko-components": "gunjam/dwp-marko-components",
     "dwp-i18next-narko-components": "gunjam/dwp-i18next-narko-components",
+    "dwp-marko-components": "gunjam/dwp-marko-components",
     "express": "^4.14.0",
     "govuk-elements-sass": "^1.2.1",
     "govuk-template-marko": "gunjam/govuk-template-marko",

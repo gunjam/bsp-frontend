@@ -16,7 +16,8 @@
   },
   "ns": [
     "app",
-    "start"
+    "start",
+    "eligibility"
   ],
   "whitelist": [
     "en",
