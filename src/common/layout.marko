@@ -44,12 +44,16 @@
   <!-- Main body content -->
   <layout-put into="content">
     <main id="content" role="main" class="group" data-journey=data.journey>
-      <layout-placeholder name="error-summary"/>
+
+      <dwp-error-summary heading=i18n('app:errorSummaryHeading')
+         summary=i18n('app:errorSummaryDetail') errors=data.errors/>
+
       <div class="grid-row">
         <div class="column-two-thirds">
           <layout-placeholder name="content"/>
         </div>
       </div>
+
     </main>
   </layout-put>
 
