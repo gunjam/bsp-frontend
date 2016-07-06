@@ -1,6 +1,5 @@
+const isValidNino = require('../../utils/is-valid-nino');
 const template = require('./template.marko');
-
-const ninex = /^(?!BG|GB|NK|KN|TN|NT|ZZ)[ABCEGHJ-PRSTW-Z][ABCEGHJ-NPRSTW-Z]\d{6}[A-D]$/;
 
 module.exports = {
   render(req, res) {
@@ -20,7 +19,7 @@ module.exports = {
 
     if (values.nino.trim() === '') {
       errors.nino = {msg: req.t('partner:question2.errorEmpty')};
-    } else if (values.nino.trim().match(ninex) === null) {
+    } else if (isValidNino(values.nino)) {
       errors.nino = {msg: req.t('partner:question2.errorInvalid')};
     }
 
