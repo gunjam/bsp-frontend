@@ -18,7 +18,8 @@
     "app",
     "start",
     "eligibility",
-    "partner"
+    "partner",
+    "you"
   ],
   "whitelist": [
     "en",

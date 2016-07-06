@@ -31,6 +31,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.get('/start', require('./src/pages/start'));
 app.use('/eligibility', require('./src/pages/eligibility'));
 app.use('/about-your-partner', require('./src/pages/partner'));
+app.use('/about-you', require('./src/pages/you'));
 
 app.listen(port, err => {
   if (err) {

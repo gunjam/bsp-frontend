@@ -1,0 +1,22 @@
+{
+  "heading": "About you",
+  "question1": {
+    "label": "Full name",
+    "error": "Cannot be blank"
+  },
+  "question2": {
+    "label": "National Insurance number",
+    "hint": "It's on your National Insurance card, benefit letter, payslip or P60. For example, 'QQ 12 34 56 C'.",
+    "errorEmpty": "Cannot be blank",
+    "errorInvalid": "Number not recognised, please double check"
+  },
+  "question3": {
+    "legend": "Date of birth",
+    "hint": "For example, 31 3 1980",
+    "dayLabel": "Day",
+    "monthLabel": "Month",
+    "yearLabel": "Year",
+    "error": "Need your date of birth"
+  },
+  "continue": "Continue"
+}
