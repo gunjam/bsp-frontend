@@ -35,6 +35,10 @@ module.exports = {
       `${req.body['date-of-death'] === 'yes' ? 'y' : 'n'}/` +
       `${req.body['in-uk'] === 'yes' ? 'y' : 'n'}`;
 
-    res.redirect(`not-eligible/${path}`);
+    if (path === 'y/y/y') {
+      res.redirect('/about-your-partner');
+    } else {
+      res.redirect(`/not-eligible/${path}`);
+    }
   }
 };
