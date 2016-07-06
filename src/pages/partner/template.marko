@@ -1,0 +1,41 @@
+<i18n-var/>
+<layout-use("../../common/layout.marko") errors=data.errors>
+
+  <layout-put into="page-title">
+    <i18n-message key="partner:heading"/> - <i18n-message key="app:serviceName"/>
+  </layout-put>
+
+  <layout-put into="content">
+
+    <h1 class="heading-xlarge">
+      <i18n-message key="partner:heading"/>
+    </h1>
+
+    <form method="post">
+
+      <dwp-input name="name" label=i18n('partner:question1.label')
+        error=data.errors.name value=data.values.name/>
+
+      <dwp-input name="nino" label=i18n('partner:question2.label')
+        hint=i18n('partner:question2.hint') error=data.errors.nino
+        value=data.values.nino/>
+
+      <dwp-date-input name="death" legend=i18n('partner:question3.legend')
+        hint=i18n('partner:question3.hint')
+        day-label=i18n('partner:question3.dayLabel')
+        month-label=i18n('partner:question3.monthLabel')
+        year-label=i18n('partner:question3.yearLabel')
+        error=data.errors.death
+        day-value=data.values['death-day']
+        month-value=data.values['death-month']
+        year-value=data.values['death-year']/>
+
+      <button type="submit" class="button">
+        <i18n-message key="partner:continue"/>
+      </button>
+
+    </form>
+
+  </layout-put>
+
+</layout-use>

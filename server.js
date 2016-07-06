@@ -30,6 +30,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 // Page routes
 app.get('/start', require('./src/pages/start'));
 app.use('/eligibility', require('./src/pages/eligibility'));
+app.use('/about-your-partner', require('./src/pages/partner'));
 
 app.listen(port, err => {
   if (err) {

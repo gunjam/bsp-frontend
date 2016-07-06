@@ -1,0 +1,22 @@
+{
+  "heading": "About your late spouse or civil partner",
+  "question1": {
+    "label": "Full name",
+    "error": "Cannot be blank"
+  },
+  "question2": {
+    "label": "National Insurance number",
+    "hint": "It's on their National Insurance card, benefit letter, payslip or P60. For example, 'QQ 12 34 56 C'.",
+    "errorEmpty": "Cannot be blank",
+    "errorInvalid": "Number not recognised, please double check"
+  },
+  "question3": {
+    "legend": "When did they die?",
+    "hint": "For example, 31 3 1980",
+    "dayLabel": "Day",
+    "monthLabel": "Month",
+    "yearLabel": "Year",
+    "error": "Need a date of death"
+  },
+  "continue": "Continue"
+}
