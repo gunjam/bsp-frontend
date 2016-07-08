@@ -44,6 +44,10 @@
   <!-- Main body content -->
   <layout-put into="content">
     <main id="content" role="main" class="group" data-journey=data.journey>
+      <dwp-beta-banner>
+        <i18n-message key="app:phaseDescription"
+          link-start="<a href='/feedback'>" link-end="</a>"/>
+      </dwp-beta-banner>
 
       <dwp-error-summary heading=i18n('app:errorSummaryHeading')
          summary=i18n('app:errorSummaryDetail') errors=data.errors/>
@@ -53,7 +57,6 @@
           <layout-placeholder name="content"/>
         </div>
       </div>
-
     </main>
   </layout-put>
 
