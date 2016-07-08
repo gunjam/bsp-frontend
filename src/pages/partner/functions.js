@@ -23,9 +23,9 @@ module.exports = {
       errors.nino = {msg: req.t('partner:question2.errorInvalid')};
     }
 
-    if (values['death-day'].trim() === '' ||
-        values['death-month'].trim() === '' ||
-        values['death-year'].trim() === '') {
+    if (values.death.day.trim() === '' ||
+        values.death.month.trim() === '' ||
+        values.death.year.trim() === '') {
       errors.death = {msg: req.t('partner:question3.error')};
     }
 

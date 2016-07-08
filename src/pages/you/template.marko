@@ -21,17 +21,11 @@
         value=data.values.nino/>
 
       <dwp-date-input name="birth" legend=i18n('you:question3.legend')
-        hint=i18n('you:question3.hint')
-        day-label=i18n('you:question3.dayLabel')
-        month-label=i18n('you:question3.monthLabel')
-        year-label=i18n('you:question3.yearLabel')
-        error=data.errors.death
-        day-value=data.values['birth-day']
-        month-value=data.values['birth-month']
-        year-value=data.values['birth-year']/>
+        hint=i18n('you:question3.hint') error=data.errors.birth
+        value=data.values.birth/>
 
       <button type="submit" class="button">
-        <i18n-message key="partner:continue"/>
+        <i18n-message key="you:continue"/>
       </button>
 
     </form>

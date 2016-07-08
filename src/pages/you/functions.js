@@ -23,10 +23,10 @@ module.exports = {
       errors.nino = {msg: req.t('you:question2.errorInvalid')};
     }
 
-    if (values['birth-day'].trim() === '' ||
-        values['birth-month'].trim() === '' ||
-        values['birth-year'].trim() === '') {
-      errors.death = {msg: req.t('you:question3.error')};
+    if (values.birth.day.trim() === '' ||
+        values.birth.month.trim() === '' ||
+        values.birth.year.trim() === '') {
+      errors.birth = {msg: req.t('you:question3.error')};
     }
 
     if (Object.keys(errors).length > 0) {

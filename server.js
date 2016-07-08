@@ -25,7 +25,7 @@ app.use(require('lasso/middleware').serveStatic());
 // Load Middleware
 app.use(i18nextMiddleware.handle(i18next));
 app.use(compression());
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({extended: true}));
 
 // Page routes
 app.get('/start', require('./src/pages/start'));
