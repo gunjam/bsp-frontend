@@ -13,9 +13,6 @@
   "question3": {
     "legend": "When did they die?",
     "hint": "For example, 31 3 1980",
-    "dayLabel": "Day",
-    "monthLabel": "Month",
-    "yearLabel": "Year",
     "error": "Need a date of death"
   },
   "continue": "Continue"
