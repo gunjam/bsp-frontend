@@ -1,0 +1,33 @@
+<i18n-var/>
+<layout-use("../../common/layout.marko") errors=data.errors>
+
+  <layout-put into="page-title">
+    <i18n-message key="contact:heading"/>
+  </layout-put>
+
+  <layout-put into="content">
+
+    <h1 class="heading-xlarge">
+      <i18n-message key="contact:heading"/>
+    </h1>
+
+    <form method="post" action="contact-details">
+
+      <bsp-address-input name="address" error=data.errors.address
+        value=data.values.address/>
+
+      <dwp-input name="postcode" label=i18n('contact:question2.label')
+        error=data.errors.postcode value=data.values.postcode/>
+
+      <dwp-input name="telephone" label=i18n('contact:question3.label')
+        error=data.errors.telephone value=data.values.telephone/>
+
+      <button type="submit" class="button">
+        <i18n-message key="contact:continue"/>
+      </button>
+
+    </form>
+
+  </layout-put>
+
+</layout-use>

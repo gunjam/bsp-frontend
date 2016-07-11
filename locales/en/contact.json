@@ -1,0 +1,15 @@
+{
+  "heading": "Your contact details",
+  "question1": {
+    "error": "Need at least one line of address"
+  },
+  "question2": {
+    "label": "Postcode",
+    "error": "Cannot be blank"
+  },
+  "question3": {
+    "label": "Telephone number",
+    "error": "Cannot be blank"
+  },
+  "continue": "Continue"
+}
