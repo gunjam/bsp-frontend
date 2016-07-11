@@ -19,13 +19,21 @@ i18next
 const app = express();
 const port = 3000;
 
+// Enable compression
+app.use(compression());
+
 // Serve static assets
 app.use(require('lasso/middleware').serveStatic());
 
 // Load Middleware
 app.use(i18nextMiddleware.handle(i18next));
-app.use(compression());
 app.use(bodyParser.urlencoded({extended: true}));
+
+// Set Content-Type header to text to make compression work for output stream
+app.use((req, res, next) => {
+  res.setHeader('Content-Type', 'text/html; charset=utf-8');
+  next();
+});
 
 // Page routes
 app.get('/start', require('./src/pages/start'));
