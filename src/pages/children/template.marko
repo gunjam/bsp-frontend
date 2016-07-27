@@ -1,0 +1,33 @@
+<i18n-var/>
+<layout-use("../../common/layout.marko") errors=data.errors>
+
+  <layout-put into="page-title">
+    <i18n-message key="children:heading"/>
+  </layout-put>
+
+  <layout-put into="content">
+
+    <h1 class="heading-xlarge">
+      <i18n-message key="children:heading"/>
+    </h1>
+    <p>
+      <i18n-message key="children:description"/>
+    </p>
+
+    <form method="post" action="dependent-children">
+
+      <dwp-radios legend=i18n('children:heading') name="children"
+        error=data.errors.children value=data.values.children hide-legend=true>
+        <dwp-radios:radio label=i18n('children:question1.label1') value="yes"/>
+        <dwp-radios:radio label=i18n('children:question1.label2') value="no"/>
+      </dwp-radios>
+
+      <button type="submit" class="button">
+        <i18n-message key="children:continue"/>
+      </button>
+
+    </form>
+
+  </layout-put>
+
+</layout-use>
