@@ -1,0 +1,28 @@
+<i18n-var/>
+<layout-use("../../common/layout.marko")>
+
+  <layout-put into="page-title">
+    <i18n-message key="declaration:heading"/>
+  </layout-put>
+
+  <layout-put into="content">
+
+    <h1 class="heading-xlarge">
+      <i18n-message key="declaration:heading"/>
+    </h1>
+
+    <p class="text">
+      <i18n-message key="declaration:declaration"/>
+    </p>
+
+    <dwp-legal content=i18n('declaration:warning')/>
+
+    <p>
+      <a href="/end" class="button" role="button">
+        <i18n-message key="declaration:agree"/>
+      </a>
+    </p>
+
+  </layout-put>
+
+</layout-use>

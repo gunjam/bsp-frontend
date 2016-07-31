@@ -24,7 +24,8 @@
     "address",
     "children",
     "payment",
-    "bank"
+    "bank",
+    "declaration"
   ],
   "whitelist": [
     "en",

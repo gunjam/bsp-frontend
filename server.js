@@ -45,6 +45,7 @@ app.use('/dependent-children', require('./src/pages/children'));
 app.use('/payment', require('./src/pages/payment'));
 app.use('/bank-details', require('./src/pages/bank'));
 app.use('/building-society-details', require('./src/pages/bank'));
+app.use('/declaration', require('./src/pages/declaration'));
 
 app.listen(port, err => {
   if (err) {
