@@ -23,7 +23,8 @@
     "contact",
     "address",
     "children",
-    "payment"
+    "payment",
+    "bank"
   ],
   "whitelist": [
     "en",

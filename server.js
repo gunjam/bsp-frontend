@@ -43,6 +43,8 @@ app.use('/about-you', require('./src/pages/you'));
 app.use('/contact-details', require('./src/pages/contact'));
 app.use('/dependent-children', require('./src/pages/children'));
 app.use('/payment', require('./src/pages/payment'));
+app.use('/bank-details', require('./src/pages/bank'));
+app.use('/building-society-details', require('./src/pages/bank'));
 
 app.listen(port, err => {
   if (err) {
