@@ -8,22 +8,16 @@ module.exports = {
     }, res);
   },
 
-  validate(req, res, next) {
-    const errors = {};
-    const values = req.body;
+  validate(req, res) {
+    const values = req.body || {};
 
-    if (typeof values.children === 'undefined') {
-      errors.children = {msg: req.t('children:question1.error')};
-    }
-
-    if (Object.keys(errors).length > 0) {
-      template.render({errors, values}, res);
+    if (values.children === 'yes' || values.children === 'no') {
+      res.redirect('/payment');
     } else {
-      next();
+      template.render({
+        errors: {children: {msg: req.t('children:question1.error')}},
+        values
+      }, res);
     }
-  },
-
-  redirect(req, res) {
-    res.redirect('bank-details');
   }
 };
