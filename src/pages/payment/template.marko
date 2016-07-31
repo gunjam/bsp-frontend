@@ -1,0 +1,30 @@
+<i18n-var/>
+<layout-use("../../common/layout.marko") errors=data.errors>
+
+  <layout-put into="page-title">
+    <i18n-message key="payment:heading"/>
+  </layout-put>
+
+  <layout-put into="content">
+
+    <h1 class="heading-xlarge">
+      <i18n-message key="payment:heading"/>
+    </h1>
+
+    <form method="post" action="payment">
+
+      <dwp-radios legend=i18n('payment:heading') name="type"
+        error=data.errors.type value=data.values.type hide-legend=true>
+        <dwp-radios:radio label=i18n('payment:bankLabel') value="bank"/>
+        <dwp-radios:radio label=i18n('payment:buildingLabel') value="building"/>
+      </dwp-radios>
+
+      <button type="submit" class="button">
+        <i18n-message key="payment:continue"/>
+      </button>
+
+    </form>
+
+  </layout-put>
+
+</layout-use>

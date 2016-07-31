@@ -1,0 +1,7 @@
+{
+  "heading": "How would you like to get paid?",
+  "bankLabel": "Bank account",
+  "buildingLabel": "Building society",
+  "error": "You must select either bank account or building society",
+  "continue": "Continue"
+}

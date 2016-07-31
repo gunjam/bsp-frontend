@@ -22,7 +22,8 @@
     "you",
     "contact",
     "address",
-    "children"
+    "children",
+    "payment"
   ],
   "whitelist": [
     "en",
