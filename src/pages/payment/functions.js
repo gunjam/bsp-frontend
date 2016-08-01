@@ -12,9 +12,9 @@ module.exports = {
     const values = req.body || {};
 
     if (values.type === 'bank') {
-      res.redirect('bank-details');
+      res.redirect('/bank-details');
     } else if (values.type === 'building') {
-      res.redirect('building-society-details');
+      res.redirect('/building-society-details');
     } else {
       template.render({
         errors: {type: {msg: req.t('payment:error')}},

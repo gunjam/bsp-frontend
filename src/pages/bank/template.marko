@@ -14,7 +14,7 @@
     </h1>
 
     <form method="post"
-      action=(data.buildingSociety ? 'building-society-details' : 'bank-details')>
+      action=(data.buildingSociety ? '/building-society-details' : '/bank-details')>
 
       <dwp-input name="account-name" label=i18n('bank:question1.label')
         error=data.errors['account-name'] value=data.values['account-name']/>

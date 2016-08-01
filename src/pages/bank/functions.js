@@ -36,7 +36,7 @@ module.exports = {
       const buildingSociety = (req.originalUrl === '/building-society-details');
       template.render({errors, values, buildingSociety}, res);
     } else {
-      res.redirect('declaration');
+      res.redirect('/declaration');
     }
   }
 };

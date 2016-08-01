@@ -44,9 +44,9 @@ module.exports = {
     const daysSinceDeath = (currentTime - dateOfDeath) / (1000 * 60 * 60 * 24);
 
     if (daysSinceDeath > 365) {
-      res.redirect('not-eligible/y/y/y/n');
+      res.redirect('/not-eligible/y/y/y/n');
     } else {
-      res.redirect('about-you');
+      res.redirect('/about-you');
     }
   }
 };
