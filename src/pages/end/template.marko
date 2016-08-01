@@ -1,0 +1,24 @@
+<i18n-var/>
+<layout-use("../../common/layout.marko")>
+
+  <layout-put into="page-title">
+    <i18n-message key="end:heading"/>
+  </layout-put>
+
+  <layout-put into="content">
+
+    <div class="govuk-box-highlight">
+      <h1 class="bold-large">
+        <i18n-message key="end:heading"/>
+      </h1>
+      <p>
+        <bsp-date/>
+        <br/>
+        <i18n-message key="end:reference"
+          reference="<br><strong class=\"heading-medium\">HDJ2123F</strong>"/>
+      </p>
+    </div>
+
+  </layout-put>
+
+</layout-use>
