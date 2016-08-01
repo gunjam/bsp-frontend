@@ -9,7 +9,7 @@ module.exports = {
     }, res);
   },
 
-  validate(req, res, next) {
+  validate(req, res) {
     const errors = {};
     const values = req.body;
 
@@ -32,11 +32,7 @@ module.exports = {
     if (Object.keys(errors).length > 0) {
       template.render({errors, values}, res);
     } else {
-      next();
+      res.redirect('/contact-details');
     }
-  },
-
-  redirect(req, res) {
-    res.redirect('contact-details');
   }
 };
