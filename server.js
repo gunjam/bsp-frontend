@@ -22,6 +22,9 @@ const port = 3000;
 // Enable compression
 app.use(compression());
 
+// Disable x-powered-by header
+app.disable('x-powered-by');
+
 // Serve static assets
 app.use(require('lasso/middleware').serveStatic());
 
