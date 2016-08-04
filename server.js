@@ -26,6 +26,12 @@ app.use(compression());
 // Disable x-powered-by header
 app.disable('x-powered-by');
 
+// Uptime ping end point
+app.use('/ping', (req, res) => {
+  res.setHeader('Content-Type', 'text/plain');
+  res.status(200).send('pong');
+});
+
 // Serve static assets
 app.use(require('lasso/middleware').serveStatic());
 
