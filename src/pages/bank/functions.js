@@ -3,12 +3,10 @@ const template = require('./template.marko');
 module.exports = {
   render(req, res) {
     const buildingSociety = (req.originalUrl === '/building-society-details');
+    const values = req.session.bank || {};
+    const errors = false;
 
-    template.render({
-      errors: false,
-      values: false,
-      buildingSociety
-    }, res);
+    template.render({errors, values, buildingSociety}, res);
   },
 
   validate(req, res) {
@@ -36,6 +34,7 @@ module.exports = {
       const buildingSociety = (req.originalUrl === '/building-society-details');
       template.render({errors, values, buildingSociety}, res);
     } else {
+      req.session.bank = values;
       res.redirect('/declaration');
     }
   }

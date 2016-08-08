@@ -2,16 +2,16 @@ const template = require('./template.marko');
 
 module.exports = {
   render(req, res) {
-    template.render({
-      errors: false,
-      values: false
-    }, res);
+    const values = req.session.children || {};
+    const errors = false;
+    template.render({errors, values}, res);
   },
 
   validate(req, res) {
     const values = req.body || {};
 
     if (values.children === 'yes' || values.children === 'no') {
+      req.session.children = values;
       res.redirect('/payment');
     } else {
       template.render({

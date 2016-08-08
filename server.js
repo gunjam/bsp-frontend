@@ -34,15 +34,15 @@ app.use('/ping', (req, res) => {
   res.status(200).send('pong');
 });
 
+// Serve static assets
+app.use(require('lasso/middleware').serveStatic());
+
 // Setup redis session
 const sessionConfig = require('./config/session');
 sessionConfig.store = new RedisStore(require('./config/redis'));
 
 app.set('trust proxy', 1);
 app.use(session(sessionConfig));
-
-// Serve static assets
-app.use(require('lasso/middleware').serveStatic());
 
 // Load Middleware
 app.use(i18nextMiddleware.handle(i18next));

@@ -4,6 +4,6 @@ const {render, validate} = require('./functions');
 const router = new express.Router();
 
 router.get('/', render);
-router.post('/', (req, res) => res.send(req.session.partner));
+router.post('/', validate);
 
 module.exports = router;

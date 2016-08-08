@@ -2,10 +2,9 @@ const template = require('./template.marko');
 
 module.exports = {
   render(req, res) {
-    template.render({
-      errors: false,
-      values: false
-    }, res);
+    const values = req.session.contact || {};
+    const errors = false;
+    template.render({errors, values}, res);
   },
 
   validate(req, res) {
@@ -29,6 +28,7 @@ module.exports = {
     if (Object.keys(errors).length > 0) {
       template.render({errors, values}, res);
     } else {
+      req.session.contact = values;
       res.redirect('/dependent-children');
     }
   }
