@@ -7,6 +7,8 @@ const helmet = require('helmet');
 const i18next = require('i18next');
 const FilesystemBackend = require('i18next-node-fs-backend');
 const i18nextMiddleware = require('i18next-express-middleware');
+const session = require('express-session');
+const RedisStore = require('connect-redis')(session);
 
 // Configure Lasso.js
 require('lasso').configure(require('./config/lasso'));
@@ -31,6 +33,13 @@ app.use('/ping', (req, res) => {
   res.setHeader('Content-Type', 'text/plain');
   res.status(200).send('pong');
 });
+
+// Setup redis session
+const sessionConfig = require('./config/session');
+sessionConfig.store = new RedisStore(require('./config/redis'));
+
+app.set('trust proxy', 1);
+app.use(session(sessionConfig));
 
 // Serve static assets
 app.use(require('lasso/middleware').serveStatic());

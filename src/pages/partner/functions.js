@@ -3,10 +3,9 @@ const template = require('./template.marko');
 
 module.exports = {
   render(req, res) {
-    template.render({
-      errors: false,
-      values: false
-    }, res);
+    const values = req.session.partner || {};
+    const errors = false;
+    template.render({errors, values}, res);
   },
 
   validate(req, res, next) {
@@ -46,6 +45,7 @@ module.exports = {
     if (daysSinceDeath > 365) {
       res.redirect('/not-eligible/y/y/y/n');
     } else {
+      req.session.partner = req.body;
       res.redirect('/about-you');
     }
   }
