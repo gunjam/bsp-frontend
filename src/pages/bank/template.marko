@@ -9,6 +9,8 @@
 
   <layout-put into="content">
 
+    <a href="/payment" class="link-back">Back</a>
+
     <h1 class="heading-xlarge">
       <i18n-message key="bank:${headingKey}"/>
     </h1>
@@ -33,7 +35,7 @@
               <i18n-message key="bank:question3.label1"/>
             </label>
             <input class="form-control" id="sort-code-1" maxlength="2"
-              name="sort-code-1" type="text">
+              name="sort-code-1" type="text" value=data.values['sort-code-1']>
           </div>
 
           <div class="form-group form-group-month">
@@ -41,7 +43,7 @@
               <i18n-message key="bank:question3.label2"/>
             </label>
             <input class="form-control" id="sort-code-2" maxlength="2"
-              name="sort-code-2" type="text">
+              name="sort-code-2" type="text" value=data.values['sort-code-2']>
           </div>
 
           <div class="form-group form-group-month">
@@ -49,7 +51,7 @@
               <i18n-message key="bank:question3.label3"/>
             </label>
             <input class="form-control" id="sort-code-3" maxlength="2"
-              name="sort-code-3" type="text">
+              name="sort-code-3" type="text" value=data.values['sort-code-3']>
           </div>
         </fieldset>
       </div>
