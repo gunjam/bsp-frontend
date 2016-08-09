@@ -11,34 +11,34 @@ module.exports = {
     const errors = {};
     const values = req.body;
 
-    if (typeof values.married === 'undefined') {
+    if (values.married !== 'yes' && values.married !== 'no') {
       errors.married = {msg: req.t('eligibility:question1.error')};
     }
-    if (typeof values['date-of-death'] === 'undefined') {
+    if (values['date-of-death'] !== 'yes' && values['date-of-death'] !== 'no') {
       errors['date-of-death'] = {msg: req.t('eligibility:question2.error')};
     }
-    if (typeof values['in-uk'] === 'undefined') {
+    if (values['in-uk'] !== 'yes' && values['in-uk'] !== 'no') {
       errors['in-uk'] = {msg: req.t('eligibility:question3.error')};
     }
 
     if (Object.keys(errors).length > 0) {
       template.render({errors, values}, res);
     } else {
-      req.session.eligibility = values;
       next();
     }
   },
 
   redirect(req, res) {
-    const path =
-      `${req.body.married === 'yes' ? 'y' : 'n'}/` +
-      `${req.body['date-of-death'] === 'yes' ? 'y' : 'n'}/` +
-      `${req.body['in-uk'] === 'yes' ? 'y' : 'n'}`;
+    const married = req.body.married;
+    const dateOfDeath = req.body['date-of-death'];
+    const inUK = req.body['in-uk'];
+    const noCount = [married, dateOfDeath, inUK].filter(i => i === 'no').length;
 
-    if (path === 'y/y/y') {
+    if (noCount === 0) {
       res.redirect('/about-your-partner');
     } else {
-      res.redirect(`/not-eligible/${path}`);
+      req.session.exit = {noCount, married, dateOfDeath, inUK};
+      res.redirect('/not-eligible');
     }
   }
 };

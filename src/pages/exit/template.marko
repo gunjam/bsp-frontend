@@ -1,0 +1,64 @@
+<i18n-var/>
+<layout-use("../../common/layout.marko")>
+
+  <layout-put into="page-title">
+    <i18n-message key="exit:heading"/>
+  </layout-put>
+
+  <layout-put into="content">
+
+    <h1 class="heading-xlarge">
+      <i18n-message key="exit:heading"/>
+    </h1>
+
+    <if(data.noCount > 1)>
+      <p>
+        <i18n-message key="exit:onlyGetIf"/>
+      </p>
+      <ul class="list-bullet">
+        <li if(data.married === 'no')>
+          <i18n-message key="exit:marriedList"/>
+        </li>
+        <li if(data.dateOfDeath === 'no')>
+          <i18n-message key="exit:diedAfterList"/>
+        </li>
+        <li if(data.inUK === 'no')>
+          <i18n-message key="exit:livedInUKList"/>
+        </li>
+      </ul><br/>
+    </if>
+    <else>
+      <p class="lede">
+        <i18n-message if(data.married === 'no') key="exit:diedAfterSingle"/>
+        <i18n-message else-if(data.dateOfDeath === 'no') key="exit:marriedSingle"/>
+        <i18n-message else-if(data.inUK === 'no') key="exit:livedInUKSingle"/>
+        <i18n-message else-if(data.dateOfBirth) key="exit:belowStatePension"/>
+      </p>
+    </else>
+
+    <div if(data.dateOfDeath) class="panel panel-border-narrow">
+      <p>
+        <i18n-message key="exit:getBereavementPayment"/>
+        <a href="https://www.gov.uk/bereavement-payment" target="_blank">
+          <i18n-message key="exit:moreOnBereavmentPayment"/>
+        </a>
+      </p>
+    </div>
+
+    <h2 class="heading-medium">
+      <i18n-message key="exit:ifMistake"/>
+    </h2>
+    <p>
+      <i18n-message key="exit:callHelpline"/>
+    </p>
+    <p>
+      <i18n-message key="exit:telephone"/><br/>
+      <i18n-message key="exit:textphone"/>
+    </p>
+    <p>
+      <i18n-message key="exit:mondayToFriday"/>
+    </p>
+
+  </layout-put>
+
+</layout-use>
