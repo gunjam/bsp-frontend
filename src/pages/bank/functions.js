@@ -1,3 +1,5 @@
+const isEmpty = require('../../utils/is-empty');
+const isNumeric = require('../../utils/is-numeric');
 const template = require('./template.marko');
 
 module.exports = {
@@ -13,20 +15,19 @@ module.exports = {
     const errors = {};
     const values = req.body;
 
-    if (typeof values['account-name'] === 'undefined' ||
-        values['account-name'] === '') {
+    if (isEmpty(values['account-name'])) {
       errors['account-name'] = {msg: req.t('bank:question1.error')};
     }
 
-    if (typeof values['account-number'] === 'undefined' ||
-        values['account-number'] === '') {
+    if (isEmpty(values['account-number'])) {
       errors['account-number'] = {msg: req.t('bank:question2.errorBlank')};
-    } else if (values['account-number'].trim().match(/[^\d]/)) {
+    } else if (!isNumeric(values['account-number'])) {
       errors['account-number'] = {msg: req.t('bank:question2.errorInvalid')};
     }
 
-    if (typeof values['sort-code-1'] === 'undefined' ||
-        values['sort-code-1'] === '') {
+    if (isEmpty(values['sort-code-1']) ||
+        isEmpty(values['sort-code-2']) ||
+        isEmpty(values['sort-code-3'])) {
       errors['sort-code'] = {msg: req.t('bank:question3.error')};
     }
 

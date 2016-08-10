@@ -1,3 +1,4 @@
+const isYesOrNo = require('../../utils/is-yes-or-no');
 const template = require('./template.marko');
 
 module.exports = {
@@ -11,13 +12,13 @@ module.exports = {
     const errors = {};
     const values = req.body;
 
-    if (values.married !== 'yes' && values.married !== 'no') {
+    if (!isYesOrNo(values.married)) {
       errors.married = {msg: req.t('eligibility:question1.error')};
     }
-    if (values['date-of-death'] !== 'yes' && values['date-of-death'] !== 'no') {
+    if (!isYesOrNo(values['date-of-death'])) {
       errors['date-of-death'] = {msg: req.t('eligibility:question2.error')};
     }
-    if (values['in-uk'] !== 'yes' && values['in-uk'] !== 'no') {
+    if (!isYesOrNo(values['in-uk'])) {
       errors['in-uk'] = {msg: req.t('eligibility:question3.error')};
     }
 

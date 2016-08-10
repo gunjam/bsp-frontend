@@ -1,3 +1,4 @@
+const isYesOrNo = require('../../utils/is-yes-or-no');
 const template = require('./template.marko');
 
 module.exports = {
@@ -10,7 +11,7 @@ module.exports = {
   validate(req, res) {
     const values = req.body || {};
 
-    if (values.children === 'yes' || values.children === 'no') {
+    if (isYesOrNo(values.children)) {
       req.session.children = values;
       res.redirect('/payment');
     } else {

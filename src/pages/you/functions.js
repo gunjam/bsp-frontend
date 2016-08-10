@@ -1,3 +1,4 @@
+const isEmpty = require('../../utils/is-empty');
 const isValidNino = require('../../utils/is-valid-nino');
 const template = require('./template.marko');
 
@@ -11,20 +12,19 @@ module.exports = {
   validate(req, res) {
     const errors = {};
     const values = req.body;
+    const birth = values.birth || {};
 
-    if (values.name.trim() === '') {
+    if (isEmpty(values.name)) {
       errors.name = {msg: req.t('you:question1.error')};
     }
 
-    if (values.nino.trim() === '') {
+    if (isEmpty(values.nino)) {
       errors.nino = {msg: req.t('you:question2.errorEmpty')};
-    } else if (isValidNino(values.nino)) {
+    } else if (!isValidNino(values.nino)) {
       errors.nino = {msg: req.t('you:question2.errorInvalid')};
     }
 
-    if (values.birth.day.trim() === '' ||
-        values.birth.month.trim() === '' ||
-        values.birth.year.trim() === '') {
+    if (isEmpty(birth.day) || isEmpty(birth.month) || isEmpty(birth.year)) {
       errors.birth = {msg: req.t('you:question3.error')};
     }
 

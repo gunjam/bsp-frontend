@@ -1,3 +1,4 @@
+const isEmpty = require('../../utils/is-empty');
 const template = require('./template.marko');
 
 module.exports = {
@@ -10,18 +11,19 @@ module.exports = {
   validate(req, res) {
     const errors = {};
     const values = req.body;
+    const address = values.address || {};
 
-    if (values.address.line1.trim() === '' &&
-        values.address.line2.trim() === '' &&
-        values.address.line3.trim() === '') {
+    if (isEmpty(address.line1) &&
+        isEmpty(address.line2) &&
+        isEmpty(address.line3)) {
       errors.address = {msg: req.t('contact:question1.error')};
     }
 
-    if (values.postcode.trim() === '') {
+    if (isEmpty(values.postcode)) {
       errors.postcode = {msg: req.t('contact:question2.error')};
     }
 
-    if (values.telephone.trim() === '') {
+    if (isEmpty(values.telephone)) {
       errors.telephone = {msg: req.t('contact:question3.error')};
     }
 
