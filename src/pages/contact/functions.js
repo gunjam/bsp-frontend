@@ -16,15 +16,15 @@ module.exports = {
     if (isEmpty(address.line1) &&
         isEmpty(address.line2) &&
         isEmpty(address.line3)) {
-      errors.address = {msg: req.t('contact:question1.error')};
+      errors.address = req.t('contact:question1.error');
     }
 
     if (isEmpty(values.postcode)) {
-      errors.postcode = {msg: req.t('contact:question2.error')};
+      errors.postcode = req.t('contact:question2.error');
     }
 
     if (isEmpty(values.telephone)) {
-      errors.telephone = {msg: req.t('contact:question3.error')};
+      errors.telephone = req.t('contact:question3.error');
     }
 
     if (Object.keys(errors).length > 0) {

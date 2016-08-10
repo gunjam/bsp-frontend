@@ -18,7 +18,7 @@ module.exports = {
       res.redirect('/building-society-details');
     } else {
       template.render({
-        errors: {type: {msg: req.t('payment:error')}},
+        errors: {type: req.t('payment:error')},
         values
       }, res);
     }

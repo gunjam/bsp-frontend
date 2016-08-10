@@ -3,6 +3,6 @@
     "required": true,
     "type": "string"
   },
-  "@error": "object",
+  "@error": "string",
   "@value": "object"
 }

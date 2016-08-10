@@ -15,17 +15,17 @@ module.exports = {
     const birth = values.birth || {};
 
     if (isEmpty(values.name)) {
-      errors.name = {msg: req.t('you:question1.error')};
+      errors.name = req.t('you:question1.error');
     }
 
     if (isEmpty(values.nino)) {
-      errors.nino = {msg: req.t('you:question2.errorEmpty')};
+      errors.nino = req.t('you:question2.errorEmpty');
     } else if (!isValidNino(values.nino)) {
-      errors.nino = {msg: req.t('you:question2.errorInvalid')};
+      errors.nino = req.t('you:question2.errorInvalid');
     }
 
     if (isEmpty(birth.day) || isEmpty(birth.month) || isEmpty(birth.year)) {
-      errors.birth = {msg: req.t('you:question3.error')};
+      errors.birth = req.t('you:question3.error');
     }
 
     if (Object.keys(errors).length > 0) {

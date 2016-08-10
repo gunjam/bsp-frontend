@@ -16,7 +16,7 @@ module.exports = {
       res.redirect('/payment');
     } else {
       template.render({
-        errors: {children: {msg: req.t('children:question1.error')}},
+        errors: {children: req.t('children:question1.error')},
         values
       }, res);
     }
