@@ -13,22 +13,22 @@
 
     <form method="post" action="/eligibility">
 
-      <dwp-radios legend=i18n('eligibility:question1.legend') name="married"
+      <dwp-radios legend=i18n('eligibility:form.married.legend') name="married"
         error=data.errors.married value=data.values.married>
-        <dwp-radios:radio label=i18n('eligibility:question1.label1') value="yes"/>
-        <dwp-radios:radio label=i18n('eligibility:question1.label2') value="no"/>
+        <dwp-radios:radio label=i18n('eligibility:form.married.labelYes') value="yes"/>
+        <dwp-radios:radio label=i18n('eligibility:form.married.labelNo') value="no"/>
       </dwp-radios>
 
-      <dwp-radios legend=i18n('eligibility:question2.legend') name="date-of-death"
+      <dwp-radios legend=i18n('eligibility:form.diedAfter.legend') name="date-of-death"
         error=data.errors['date-of-death'] value=data.values['date-of-death']>
-        <dwp-radios:radio label=i18n('eligibility:question2.label1') value="yes"/>
-        <dwp-radios:radio label=i18n('eligibility:question2.label2') value="no"/>
+        <dwp-radios:radio label=i18n('eligibility:form.diedAfter.labelYes') value="yes"/>
+        <dwp-radios:radio label=i18n('eligibility:form.diedAfter.labelNo') value="no"/>
       </dwp-radios>
 
-      <dwp-radios legend=i18n('eligibility:question3.legend') name="in-uk"
+      <dwp-radios legend=i18n('eligibility:form.inUK.legend') name="in-uk"
         error=data.errors['in-uk'] value=data.values['in-uk']>
-        <dwp-radios:radio label=i18n('eligibility:question3.label1') value="yes"/>
-        <dwp-radios:radio label=i18n('eligibility:question3.label2') value="no"/>
+        <dwp-radios:radio label=i18n('eligibility:form.inUK.labelYes') value="yes"/>
+        <dwp-radios:radio label=i18n('eligibility:form.inUK.labelNo') value="no"/>
       </dwp-radios>
 
       <button type="submit" class="button">

@@ -18,21 +18,21 @@
     <form method="post"
       action=(data.buildingSociety ? '/building-society-details' : '/bank-details')>
 
-      <dwp-input name="account-name" label=i18n('bank:question1.label')
+      <dwp-input name="account-name" label=i18n('bank:form.accountName.label')
         error=data.errors['account-name'] value=data.values['account-name']/>
 
-      <dwp-input name="account-number" label=i18n('bank:question2.label')
+      <dwp-input name="account-number" label=i18n('bank:form.accountNumber.label')
         error=data.errors['account-number'] value=data.values['account-number']/>
 
       <div class="form-date form-group">
         <legend class="form-label">
-          <i18n-message key="bank:question3.legend"/>
+          <i18n-message key="bank:form.sortCode.legend"/>
         </legend>
 
         <fieldset>
           <div class="form-group form-group-day">
             <label for="sort-code-1" class="visuallyhidden">
-              <i18n-message key="bank:question3.label1"/>
+              <i18n-message key="bank:form.sortCode.label1"/>
             </label>
             <input class="form-control" id="sort-code-1" maxlength="2"
               name="sort-code-1" type="text" value=data.values['sort-code-1']>
@@ -40,7 +40,7 @@
 
           <div class="form-group form-group-month">
             <label for="sort-code-2" class="visuallyhidden">
-              <i18n-message key="bank:question3.label2"/>
+              <i18n-message key="bank:form.sortCode.label2"/>
             </label>
             <input class="form-control" id="sort-code-2" maxlength="2"
               name="sort-code-2" type="text" value=data.values['sort-code-2']>
@@ -48,7 +48,7 @@
 
           <div class="form-group form-group-month">
             <label for="sort-code-3" class="visuallyhidden">
-              <i18n-message key="bank:question3.label3"/>
+              <i18n-message key="bank:form.sortCode.label3"/>
             </label>
             <input class="form-control" id="sort-code-3" maxlength="2"
               name="sort-code-3" type="text" value=data.values['sort-code-3']>
@@ -58,15 +58,15 @@
 
       <if(data.buildingSociety)>
         <p>
-          <i18n-message key="bank:or"/>
+          <i18n-message key="bank:form.or"/>
         </p>
 
-        <dwp-input name="roll-number" label=i18n('bank:question4.label')
-          hint=i18n('bank:question4.hint')/>
+        <dwp-input name="roll-number" label=i18n('bank:form.rollNumber.label')
+          hint=i18n('bank:form.rollNumber.hint')/>
       </if>
 
       <button type="submit" class="button">
-        <i18n-message key="children:continue"/>
+        <i18n-message key="bank:continue"/>
       </button>
 
     </form>

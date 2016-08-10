@@ -13,13 +13,13 @@ module.exports = {
     const values = req.body;
 
     if (!isYesOrNo(values.married)) {
-      errors.married = req.t('eligibility:question1.error');
+      errors.married = req.t('eligibility:form.married.error');
     }
     if (!isYesOrNo(values['date-of-death'])) {
-      errors['date-of-death'] = req.t('eligibility:question2.error');
+      errors['date-of-death'] = req.t('eligibility:form.diedAfter.error');
     }
     if (!isYesOrNo(values['in-uk'])) {
-      errors['in-uk'] = req.t('eligibility:question3.error');
+      errors['in-uk'] = req.t('eligibility:form.inUK.error');
     }
 
     if (Object.keys(errors).length > 0) {

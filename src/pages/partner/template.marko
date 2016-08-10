@@ -15,15 +15,15 @@
 
     <form method="post" action="/about-your-partner">
 
-      <dwp-input name="name" label=i18n('partner:question1.label')
+      <dwp-input name="name" label=i18n('partner:form.name.label')
         error=data.errors.name value=data.values.name/>
 
-      <dwp-input name="nino" label=i18n('partner:question2.label')
-        hint=i18n('partner:question2.hint') error=data.errors.nino
+      <dwp-input name="nino" label=i18n('partner:form.nino.label')
+        hint=i18n('partner:form.nino.hint') error=data.errors.nino
         value=data.values.nino/>
 
-      <dwp-date-input name="death" legend=i18n('partner:question3.legend')
-        hint=i18n('partner:question3.hint') error=data.errors.death
+      <dwp-date-input name="death" legend=i18n('partner:form.death.legend')
+        hint=i18n('partner:form.death.hint') error=data.errors.death
         value=data.values.death/>
 
       <button type="submit" class="button">

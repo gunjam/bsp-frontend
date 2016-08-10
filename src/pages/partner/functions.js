@@ -15,17 +15,17 @@ module.exports = {
     const death = values.death || {};
 
     if (isEmpty(values.name)) {
-      errors.name = req.t('partner:question1.error');
+      errors.name = req.t('partner:form.name.error');
     }
 
     if (isEmpty(values.nino)) {
-      errors.nino = req.t('partner:question2.errorEmpty');
+      errors.nino = req.t('partner:form.nino.errorEmpty');
     } else if (!isValidNino(values.nino)) {
-      errors.nino = req.t('partner:question2.errorInvalid');
+      errors.nino = req.t('partner:form.nino.errorInvalid');
     }
 
     if (isEmpty(death.day) || isEmpty(death.month) || isEmpty(death.year)) {
-      errors.death = req.t('partner:question3.error');
+      errors.death = req.t('partner:form.death.error');
     }
 
     if (Object.keys(errors).length > 0) {

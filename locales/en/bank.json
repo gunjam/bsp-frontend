@@ -1,26 +1,28 @@
 {
   "heading": "Your bank account details",
   "headingBuilding": "Your building society account details",
-  "question1": {
-    "label": "Name on account",
-    "error": "Cannot be blank"
-  },
-  "question2": {
-    "label": "Account number",
-    "errorBlank": "Cannot be blank",
-    "errorInvalid": "Must be a number"
-  },
-  "question3": {
-    "legend": "Sort code",
-    "label1": "First two digits of sort code",
-    "label2": "Second two digits of sort code",
-    "label3": "Third two digits of sort code",
-    "error": "Cannot be blank"
-  },
-  "or": "or",
-  "question4": {
-    "label": "Building society roll or reference number",
-    "hint": "If your building society uses a roll or reference number, you will find it on your passbook"
+  "form": {
+    "accountName": {
+      "label": "Name on account",
+      "error": "Cannot be blank"
+    },
+    "accountNumber": {
+      "label": "Account number",
+      "errorBlank": "Cannot be blank",
+      "errorInvalid": "Must be a number"
+    },
+    "sortCode": {
+      "legend": "Sort code",
+      "label1": "First two digits of sort code",
+      "label2": "Second two digits of sort code",
+      "label3": "Third two digits of sort code",
+      "error": "Cannot be blank"
+    },
+    "or": "or",
+    "rollNumber": {
+      "label": "Building society roll or reference number",
+      "hint": "If your building society uses a roll or reference number, you will find it on your passbook"
+    }
   },
   "safe": {
     "heading": "Safe and secure",

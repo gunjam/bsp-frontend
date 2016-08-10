@@ -1,22 +1,24 @@
 {
   "heading": "Can you get Bereavement Support Payment?",
-  "question1": {
-    "legend": "Were you married to, or in a civil partnership with, your partner when they died?",
-    "label1": "Yes",
-    "label2": "No",
-    "error": "Please answer Yes or No"
-  },
-  "question2": {
-    "legend": "Did your spouse or civil partner die after 6 April 2014?",
-    "label1": "Yes",
-    "label2": "No",
-    "error": "Please answer Yes or No"
-  },
-  "question3": {
-    "legend": "Did you live in the UK when your spouse or civil partner died?",
-    "label1": "Yes",
-    "label2": "No",
-    "error": "Please answer Yes or No"
+  "form": {
+    "married": {
+      "legend": "Were you married to, or in a civil partnership with, your partner when they died?",
+      "labelYes": "Yes",
+      "labelNo": "No",
+      "error": "Please answer Yes or No"
+    },
+    "diedAfter": {
+      "legend": "Did your spouse or civil partner die after 6 April 2014?",
+      "labelYes": "Yes",
+      "labelNo": "No",
+      "error": "Please answer Yes or No"
+    },
+    "inUK": {
+      "legend": "Did you live in the UK when your spouse or civil partner died?",
+      "labelYes": "Yes",
+      "labelNo": "No",
+      "error": "Please answer Yes or No"
+    }
   },
   "continue": "Continue"
 }
