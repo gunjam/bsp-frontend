@@ -1,6 +1,6 @@
-const ninoMatcher = /^(?!BG|GB|NK|KN|TN|NT|ZZ)[ABCEGHJ-PRSTW-Z]{2}\d{6}[A-D]$/;
+const ninoMatcher = /^(?!BG|GB|NK|KN|TN|NT|ZZ)[ABCEGHJ-PRSTW-Z]{2}\d{6}[A-D]$/i;
 
 module.exports = function (nino) {
-  const sanitised = nino.toString().toLowerCase().replace(/\s/g);
-  return sanitised.match(ninoMatcher) !== null;
+  const sanitised = `${nino}`.replace(/\s/g, '');
+  return ninoMatcher.test(sanitised);
 };
