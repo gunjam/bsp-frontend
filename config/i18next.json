@@ -27,7 +27,9 @@
     "payment",
     "bank",
     "declaration",
-    "end"
+    "end",
+    "404",
+    "500"
   ],
   "whitelist": [
     "en",

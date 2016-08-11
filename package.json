@@ -33,6 +33,9 @@
     "ignores": [
       "static/**",
       "**/*.marko.js"
-    ]
+    ],
+    "rules": {
+      "no-unused-vars": [2, {"args": "after-used", "argsIgnorePattern": "^_"}]
+    }
   }
 }
