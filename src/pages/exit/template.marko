@@ -16,23 +16,23 @@
         <i18n-message key="exit:onlyGetIf"/>
       </p>
       <ul class="list-bullet">
-        <li if(data.married === 'no')>
-          <i18n-message key="exit:marriedList"/>
+        <li if(data.notMarried)>
+          <i18n-message key="exit:notMarried.list"/>
         </li>
-        <li if(data.dateOfDeath === 'no')>
-          <i18n-message key="exit:diedAfterList"/>
+        <li if(data.deathOver12m)>
+          <i18n-message key="exit:deathOver12m.list"/>
         </li>
-        <li if(data.inUK === 'no')>
-          <i18n-message key="exit:livedInUKList"/>
+        <li if(data.notInUK)>
+          <i18n-message key="exit:notInUK.list"/>
         </li>
       </ul><br/>
     </if>
     <else>
       <p class="lede">
-        <i18n-message if(data.married === 'no') key="exit:diedAfterSingle"/>
-        <i18n-message else-if(data.dateOfDeath === 'no') key="exit:marriedSingle"/>
-        <i18n-message else-if(data.inUK === 'no') key="exit:livedInUKSingle"/>
-        <i18n-message else-if(data.dateOfBirth) key="exit:belowStatePension"/>
+        <i18n-message if(data.notMarried) key="exit:notMarried.p"/>
+        <i18n-message else-if(data.deathOver12m) key="exit:deathOver12m.p"/>
+        <i18n-message else-if(data.notInUK) key="exit:notInUK.p"/>
+        <i18n-message else-if(data.overPensionAge) key="exit:overPensionAge"/>
       </p>
     </else>
 

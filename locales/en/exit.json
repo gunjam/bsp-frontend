@@ -2,12 +2,18 @@
   "heading": "Based on your answers, you can’t get Bereavement Support Payment",
   "back": "Back",
   "onlyGetIf": "You can only get it if",
-  "marriedList": "you were married to, or in a civil partnership with, your partner when they died",
-  "diedAfterList": "your spouse or civil partner died after 6 April 2014",
-  "livedInUKList": "you lived in the UK when your spouse or civil partner died",
-  "marriedSingle": "You can only get it if you were married to, or in a civil partnership with, your partner when they died.",
-  "diedAfterSingle": "You can only get it if your spouse or civil partner died after 6 April 2014.",
-  "livedInUKSingle": "You can only get it if you lived in the UK when your spouse or civil partner died.",
+  "notMarried": {
+    "list": "you were married to, or in a civil partnership with, your partner when they died",
+    "p": "You can only get it if you were married to, or in a civil partnership with, your partner when they died."
+  },
+  "deathOver12m": {
+    "list": "your spouse or civil partner died after 6 April 2014",
+    "p": "You can only get it if your spouse or civil partner died after 6 April 2014."
+  },
+  "notInUK": {
+    "list": "you lived in the UK when your spouse or civil partner died",
+    "p": "You can only get it if you lived in the UK when your spouse or civil partner died."
+  },
   "belowStatePension": "You can only get it if you were below State Pension age when your spouse or civil partner died.",
   "getBereavementPayment": "If your spouse or civil partner died within the last year, you may still be able to get Bereavement Payment. ",
   "moreOnBereavmentPayment": "More on Bereavement Payment (opens in a new tab)",

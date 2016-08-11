@@ -39,7 +39,7 @@ module.exports = {
       const daysFromDeath = (currentTime - dateOfDeath) / (1000 * 60 * 60 * 24);
 
       if (daysFromDeath > 365) {
-        req.session.exit = {dateOfDeath: true};
+        req.session.exit = {deathOver12m: true};
         res.redirect('/not-eligible');
       } else {
         req.session.partner = req.body;
