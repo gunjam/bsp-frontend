@@ -14,7 +14,8 @@
     "death": {
       "legend": "When did they die?",
       "hint": "For example, 31 3 1980",
-      "error": "Need a date of death"
+      "errorEmpty": "Need a date of death",
+      "errorInvalid": "Date is invalid, check the format"
     }
   },
   "continue": "Continue"
