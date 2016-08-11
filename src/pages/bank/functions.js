@@ -4,11 +4,11 @@ const template = require('./template.marko');
 
 module.exports = {
   render(req, res) {
-    const buildingSociety = (req.originalUrl === '/building-society-details');
+    const isBuildingSoc = (req.originalUrl === '/building-society-details');
     const values = req.session.bank || {};
     const errors = false;
 
-    template.render({errors, values, buildingSociety}, res);
+    template.render({errors, values, isBuildingSoc}, res);
   },
 
   validate(req, res) {
