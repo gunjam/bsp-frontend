@@ -1,6 +1,7 @@
 {
   "heading": "Your bank account details",
   "headingBuilding": "Your building society account details",
+  "back": "Back",
   "form": {
     "accountName": {
       "label": "Name on account",

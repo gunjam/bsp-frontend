@@ -1,5 +1,6 @@
 {
   "heading": "Your contact details",
+  "back": "Back",
   "form": {
     "address": {
       "error": "Need at least one line of address"

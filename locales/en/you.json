@@ -1,5 +1,6 @@
 {
   "heading": "About you",
+  "back": "Back",
   "form": {
     "name": {
       "label": "Full name",

@@ -1,5 +1,6 @@
 {
   "heading": "How would you like to get paid?",
+  "back": "Back",
   "form": {
     "type": {
       "bankLabel": "Bank account",
