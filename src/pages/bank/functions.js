@@ -1,17 +1,16 @@
+const getSession = require('../../lib/get-session');
 const isEmpty = require('../../utils/is-empty');
 const isNumeric = require('../../utils/is-numeric');
 const template = require('./template.marko');
 
 module.exports = {
-  render(req, res) {
+  get(req, res) {
     const isBuildingSoc = (req.originalUrl === '/building-society-details');
-    const values = req.session.bank || {};
-    const errors = false;
-
-    template.render({errors, values, isBuildingSoc}, res);
+    const values = getSession(req, 'bank');
+    template.render({errors: false, values, isBuildingSoc}, res);
   },
 
-  validate(req, res) {
+  post(req, res) {
     const errors = {};
     const values = req.body;
 

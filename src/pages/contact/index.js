@@ -1,9 +1,9 @@
 const express = require('express');
-const {render, validate} = require('./functions');
+const {get, post} = require('./functions');
 
 const router = new express.Router();
 
-router.get('/', render);
-router.post('/', validate);
+router.get('/', get);
+router.post('/', post);
 
 module.exports = router;

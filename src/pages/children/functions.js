@@ -1,15 +1,12 @@
 const isYesOrNo = require('../../utils/is-yes-or-no');
+const renderForm = require('../../lib/render-form');
 const template = require('./template.marko');
 
 module.exports = {
-  render(req, res) {
-    const values = req.session.children || {};
-    const errors = false;
-    template.render({errors, values}, res);
-  },
+  get: renderForm('children'),
 
-  validate(req, res) {
-    const values = req.body || {};
+  post(req, res) {
+    const values = req.body;
 
     if (isYesOrNo(values.children)) {
       req.session.children = values;

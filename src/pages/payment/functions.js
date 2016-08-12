@@ -1,13 +1,10 @@
+const renderForm = require('../../lib/render-form');
 const template = require('./template.marko');
 
 module.exports = {
-  render(req, res) {
-    const values = req.session.payment || {};
-    const errors = false;
-    template.render({errors, values}, res);
-  },
+  get: renderForm('payment'),
 
-  validate(req, res) {
+  post(req, res) {
     const values = req.body || {};
 
     if (values.type === 'bank') {

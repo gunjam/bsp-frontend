@@ -1,15 +1,12 @@
+const renderForm = require('../../lib/render-form');
 const isEmpty = require('../../utils/is-empty');
 const isValidNino = require('../../utils/is-valid-nino');
 const template = require('./template.marko');
 
 module.exports = {
-  render(req, res) {
-    const values = req.session.you || {};
-    const errors = false;
-    template.render({errors, values}, res);
-  },
+  get: renderForm('you'),
 
-  validate(req, res) {
+  post(req, res) {
     const errors = {};
     const values = req.body;
     const birth = values.birth || {};

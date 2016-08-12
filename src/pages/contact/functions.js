@@ -1,14 +1,11 @@
+const renderForm = require('../../lib/render-form');
 const isEmpty = require('../../utils/is-empty');
 const template = require('./template.marko');
 
 module.exports = {
-  render(req, res) {
-    const values = req.session.contact || {};
-    const errors = false;
-    template.render({errors, values}, res);
-  },
+  get: renderForm('contact'),
 
-  validate(req, res) {
+  post(req, res) {
     const errors = {};
     const values = req.body;
     const address = values.address || {};

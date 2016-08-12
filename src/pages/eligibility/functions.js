@@ -1,14 +1,11 @@
+const renderForm = require('../../lib/render-form');
 const isYesOrNo = require('../../utils/is-yes-or-no');
 const template = require('./template.marko');
 
 module.exports = {
-  render(req, res) {
-    const values = req.session.eligibility || {};
-    const errors = false;
-    template.render({errors, values}, res);
-  },
+  get: renderForm('eligibility'),
 
-  validate(req, res) {
+  post(req, res) {
     const errors = {};
     const values = req.body;
 
