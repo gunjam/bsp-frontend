@@ -58,7 +58,7 @@ app.use((req, res, next) => {
 // Page routes
 app.get('/start', require('./src/pages/start'));
 app.use('/eligibility', require('./src/pages/eligibility'));
-app.use('/not-eligible', require('./src/pages/exit'));
+app.get('/not-eligible', require('./src/pages/exit'));
 app.use('/about-your-partner', require('./src/pages/partner'));
 app.use('/about-you', require('./src/pages/you'));
 app.use('/contact-details', require('./src/pages/contact'));
@@ -66,8 +66,8 @@ app.use('/dependent-children', require('./src/pages/children'));
 app.use('/payment', require('./src/pages/payment'));
 app.use('/bank-details', require('./src/pages/bank'));
 app.use('/building-society-details', require('./src/pages/bank'));
-app.use('/declaration', require('./src/pages/declaration'));
-app.use('/end', require('./src/pages/end'));
+app.get('/declaration', require('./src/pages/declaration'));
+app.get('/end', require('./src/pages/end'));
 
 // Error pages
 app.use(require('./src/pages/404'));
