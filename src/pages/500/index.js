@@ -1,3 +1,5 @@
+'use strict';
+
 const template = require('./template.marko');
 
 const developmentMode = process.env.NODE_ENV === 'development';

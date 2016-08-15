@@ -1,3 +1,5 @@
+'use strict';
+
 const renderForm = require('../../lib/render-form');
 const template = require('./template.marko');
 

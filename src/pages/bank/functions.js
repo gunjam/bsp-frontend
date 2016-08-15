@@ -1,3 +1,5 @@
+'use strict';
+
 const isEmpty = require('../../utils/is-empty');
 const isNumeric = require('../../utils/is-numeric');
 const template = require('./template.marko');

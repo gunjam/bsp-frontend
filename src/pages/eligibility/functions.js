@@ -1,3 +1,5 @@
+'use strict';
+
 const renderForm = require('../../lib/render-form');
 const isYesOrNo = require('../../utils/is-yes-or-no');
 const template = require('./template.marko');
