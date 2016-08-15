@@ -28,7 +28,7 @@
         hint=i18n('partner:form.death.hint') error=data.errors.death
         value=data.values.death/>
 
-      <input type="hidden" name="_csrf" value=data.csrfToken/>
+      <bsp-csrf-token/>
 
       <button type="submit" class="button">
         <i18n-message key="partner:continue"/>

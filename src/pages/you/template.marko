@@ -28,7 +28,7 @@
         hint=i18n('you:form.birth.hint') error=data.errors.birth
         value=data.values.birth/>
 
-      <input type="hidden" name="_csrf" value=data.csrfToken/>
+      <bsp-csrf-token/>
 
       <button type="submit" class="button">
         <i18n-message key="you:continue"/>

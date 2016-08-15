@@ -23,7 +23,7 @@
         <dwp-radios:radio label=i18n('payment:form.type.buildingLabel') value="building"/>
       </dwp-radios>
 
-      <input type="hidden" name="_csrf" value=data.csrfToken/>
+      <bsp-csrf-token/>
 
       <button type="submit" class="button">
         <i18n-message key="payment:continue"/>

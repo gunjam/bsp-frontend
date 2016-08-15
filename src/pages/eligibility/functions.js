@@ -22,7 +22,7 @@ module.exports = {
     }
 
     if (Object.keys(errors).length > 0) {
-      template.render({errors, values, csrfToken: req.csrfToken()}, res);
+      template.render({errors, values}, res);
     } else {
       const notMarried = (values.married === 'no');
       const deathOver12m = (values['date-of-death'] === 'no');

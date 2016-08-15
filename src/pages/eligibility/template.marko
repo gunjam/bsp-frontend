@@ -31,7 +31,7 @@
         <dwp-radios:radio label=i18n('eligibility:form.inUK.labelNo') value="no"/>
       </dwp-radios>
 
-      <input type="hidden" name="_csrf" value=data.csrfToken/>
+      <bsp-csrf-token/>
 
       <button type="submit" class="button">
         <i18n-message key="eligibility:continue"/>

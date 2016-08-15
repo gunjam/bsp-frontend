@@ -27,7 +27,7 @@ module.exports = {
     }
 
     if (Object.keys(errors).length > 0) {
-      template.render({errors, values, csrfToken: req.csrfToken()}, res);
+      template.render({errors, values}, res);
     } else {
       res.setSessionAndRedirect('contact', values, '/dependent-children');
     }

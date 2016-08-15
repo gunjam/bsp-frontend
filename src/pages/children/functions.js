@@ -14,7 +14,7 @@ module.exports = {
       res.setSessionAndRedirect('children', values, '/payment');
     } else {
       const errors = {children: req.t('children:form.haveChildren.error')};
-      template.render({errors, values, csrfToken: req.csrfToken()}, res);
+      template.render({errors, values}, res);
     }
   }
 };
