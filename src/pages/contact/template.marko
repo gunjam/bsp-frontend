@@ -26,6 +26,8 @@
       <dwp-input name="telephone" label=i18n('contact:form.telephone.label')
         error=data.errors.telephone value=data.values.telephone/>
 
+      <input type="hidden" name="_csrf" value=data.csrfToken/>
+
       <button type="submit" class="button">
         <i18n-message key="contact:continue"/>
       </button>

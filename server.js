@@ -3,6 +3,7 @@ require('marko/node-require').install();
 
 const bodyParser = require('body-parser');
 const compression = require('compression');
+const csrf = require('csurf');
 const express = require('express');
 const helmet = require('helmet');
 const i18next = require('i18next');
@@ -50,6 +51,7 @@ app.use(sessionHelpers);
 // Load Middleware
 app.use(i18nextMiddleware.handle(i18next));
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(csrf());
 app.use(helmet(require('./config/helmet')));
 
 // Set Content-Type header to text to make compression work for output stream

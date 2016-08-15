@@ -6,6 +6,7 @@
     "body-parser": "^1.15.2",
     "compression": "^1.6.2",
     "connect-redis": "^3.1.0",
+    "csurf": "^1.9.0",
     "dwp-i18next-narko-components": "gunjam/dwp-i18next-narko-components",
     "dwp-marko-components": "gunjam/dwp-marko-components",
     "express": "^4.14.0",
@@ -35,7 +36,13 @@
       "**/*.marko.js"
     ],
     "rules": {
-      "no-unused-vars": [2, {"args": "after-used", "argsIgnorePattern": "^_"}]
+      "no-unused-vars": [
+        2,
+        {
+          "args": "after-used",
+          "argsIgnorePattern": "^_"
+        }
+      ]
     }
   }
 }

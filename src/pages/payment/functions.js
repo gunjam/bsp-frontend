@@ -15,7 +15,7 @@ module.exports = {
       res.setSessionAndRedirect('payment', values, '/building-society-details');
     } else {
       const errors = {type: req.t('payment:form.type.error')};
-      template.render({errors, values}, res);
+      template.render({errors, values, csrfToken: req.csrfToken()}, res);
     }
   }
 };

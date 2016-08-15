@@ -37,6 +37,8 @@
           hint=i18n('bank:form.rollNumber.hint')/>
       </if>
 
+      <input type="hidden" name="_csrf" value=data.csrfToken/>
+
       <button type="submit" class="button">
         <i18n-message key="bank:continue"/>
       </button>

@@ -31,7 +31,7 @@ module.exports = {
     }
 
     if (Object.keys(errors).length > 0) {
-      template.render({errors, values}, res);
+      template.render({errors, values, csrfToken: req.csrfToken()}, res);
     } else {
       const currentTime = new Date();
       const dateOfDeath = new Date(`${death.day}/${death.month}/${death.year}`);

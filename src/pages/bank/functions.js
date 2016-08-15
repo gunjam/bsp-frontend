@@ -8,7 +8,8 @@ module.exports = {
   get(req, res) {
     const isBuildingSoc = (req.originalUrl === '/building-society-details');
     const values = req.getSession('bank');
-    template.render({errors: false, values, isBuildingSoc}, res);
+    const csrfToken = req.csrfToken();
+    template.render({errors: false, values, isBuildingSoc, csrfToken}, res);
   },
 
   post(req, res) {
@@ -33,7 +34,8 @@ module.exports = {
 
     if (Object.keys(errors).length > 0) {
       const buildingSociety = (req.originalUrl === '/building-society-details');
-      template.render({errors, values, buildingSociety}, res);
+      const csrfToken = req.csrfToken();
+      template.render({errors, values, buildingSociety, csrfToken}, res);
     } else {
       res.setSessionAndRedirect('bank', values, '/declaration');
     }
