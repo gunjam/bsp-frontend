@@ -33,6 +33,7 @@ module.exports = {
         res.setSessionAndRedirect('eligibility', values, '/about-your-partner');
       } else {
         const data = {notMarried, deathOver12m, notInUK, noCount};
+        req.session.eligibility = values;
         res.setSessionAndRedirect('exit', data, '/not-eligible');
       }
     }
