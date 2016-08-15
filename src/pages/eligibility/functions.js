@@ -30,7 +30,7 @@ module.exports = {
       const noCount = [notMarried, deathOver12m, notInUK].filter(i => i).length;
 
       if (noCount === 0) {
-        res.redirect('/about-your-partner');
+        res.setSessionAndRedirect('eligibility', values, '/about-your-partner');
       } else {
         const data = {notMarried, deathOver12m, notInUK, noCount};
         res.setSessionAndRedirect('exit', data, '/not-eligible');
