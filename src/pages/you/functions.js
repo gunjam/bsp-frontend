@@ -28,8 +28,7 @@ module.exports = {
     if (Object.keys(errors).length > 0) {
       template.render({errors, values}, res);
     } else {
-      req.session.you = values;
-      res.redirect('/contact-details');
+      res.setSessionAndRedirect('you', values, '/contact-details');
     }
   }
 };

@@ -27,8 +27,7 @@ module.exports = {
     if (Object.keys(errors).length > 0) {
       template.render({errors, values}, res);
     } else {
-      req.session.contact = values;
-      res.redirect('/dependent-children');
+      res.setSessionAndRedirect('contact', values, '/dependent-children');
     }
   }
 };

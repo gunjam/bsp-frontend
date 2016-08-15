@@ -8,16 +8,12 @@ module.exports = {
     const values = req.body || {};
 
     if (values.type === 'bank') {
-      req.session.payment = values;
-      res.redirect('/bank-details');
+      res.setSessionAndRedirect('payment', values, '/bank-details');
     } else if (values.type === 'building') {
-      req.session.payment = values;
-      res.redirect('/building-society-details');
+      res.setSessionAndRedirect('payment', values, '/building-society-details');
     } else {
-      template.render({
-        errors: {type: req.t('payment:form.type.error')},
-        values
-      }, res);
+      const errors = {type: req.t('payment:form.type.error')};
+      template.render({errors, values}, res);
     }
   }
 };

@@ -34,13 +34,12 @@ module.exports = {
       const currentTime = new Date();
       const dateOfDeath = new Date(`${death.day}/${death.month}/${death.year}`);
       const daysFromDeath = (currentTime - dateOfDeath) / (1000 * 60 * 60 * 24);
+      const deathOver12m = daysFromDeath > 365;
 
-      if (daysFromDeath > 365) {
-        req.session.exit = {deathOver12m: true};
-        res.redirect('/not-eligible');
+      if (deathOver12m) {
+        res.setSessionAndRedirect('exit', {deathOver12m}, '/not-eligible');
       } else {
-        req.session.partner = req.body;
-        res.redirect('/about-you');
+        res.setSessionAndRedirect('partner', values, '/about-you');
       }
     }
   }

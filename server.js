@@ -9,6 +9,7 @@ const FilesystemBackend = require('i18next-node-fs-backend');
 const i18nextMiddleware = require('i18next-express-middleware');
 const session = require('express-session');
 const RedisStore = require('connect-redis')(session);
+const sessionHelpers = require('./src/lib/session-helpers');
 
 // Configure Lasso.js
 require('lasso').configure(require('./config/lasso'));
@@ -43,6 +44,7 @@ sessionConfig.store = new RedisStore(require('./config/redis'));
 
 app.set('trust proxy', 1);
 app.use(session(sessionConfig));
+app.use(sessionHelpers);
 
 // Load Middleware
 app.use(i18nextMiddleware.handle(i18next));

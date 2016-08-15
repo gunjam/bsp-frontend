@@ -30,8 +30,8 @@ module.exports = {
       if (noCount === 0) {
         res.redirect('/about-your-partner');
       } else {
-        req.session.exit = {notMarried, deathOver12m, notInUK, noCount};
-        res.redirect('/not-eligible');
+        const data = {notMarried, deathOver12m, notInUK, noCount};
+        res.setSessionAndRedirect('exit', data, '/not-eligible');
       }
     }
   }

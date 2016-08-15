@@ -9,13 +9,10 @@ module.exports = {
     const values = req.body;
 
     if (isYesOrNo(values.children)) {
-      req.session.children = values;
-      res.redirect('/payment');
+      res.setSessionAndRedirect('children', values, '/payment');
     } else {
-      template.render({
-        errors: {children: req.t('children:form.haveChildren.error')},
-        values
-      }, res);
+      const errors = {children: req.t('children:form.haveChildren.error')};
+      template.render({errors, values}, res);
     }
   }
 };

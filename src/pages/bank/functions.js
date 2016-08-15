@@ -1,4 +1,3 @@
-const getSession = require('../../lib/get-session');
 const isEmpty = require('../../utils/is-empty');
 const isNumeric = require('../../utils/is-numeric');
 const template = require('./template.marko');
@@ -6,7 +5,7 @@ const template = require('./template.marko');
 module.exports = {
   get(req, res) {
     const isBuildingSoc = (req.originalUrl === '/building-society-details');
-    const values = getSession(req, 'bank');
+    const values = req.getSession('bank');
     template.render({errors: false, values, isBuildingSoc}, res);
   },
 
@@ -34,8 +33,7 @@ module.exports = {
       const buildingSociety = (req.originalUrl === '/building-society-details');
       template.render({errors, values, buildingSociety}, res);
     } else {
-      req.session.bank = values;
-      res.redirect('/declaration');
+      res.setSessionAndRedirect('bank', values, '/declaration');
     }
   }
 };
