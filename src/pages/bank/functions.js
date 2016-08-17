@@ -32,8 +32,8 @@ module.exports = {
     }
 
     if (Object.keys(errors).length > 0) {
-      const buildingSociety = (req.originalUrl === '/building-society-details');
-      template.render({errors, values, buildingSociety}, res);
+      const isBuildingSoc = (req.originalUrl === '/building-society-details');
+      template.render({errors, values, isBuildingSoc}, res);
     } else {
       res.setSessionAndRedirect('bank', values, '/declaration');
     }
