@@ -5,8 +5,8 @@ module.exports = function (req, res, next) {
     return req.session[name] || {};
   };
   res.setSessionAndRedirect = function (name, data, url) {
-    res.redirect(url);
     req.session[name] = data;
+    res.redirect(url);
   };
   next();
 };
