@@ -1,9 +1,7 @@
 'use strict';
 
+const isYesNo = /^yes$|^no$/;
+
 module.exports = function (input) {
-  if (typeof input !== 'string') {
-    return false;
-  }
-  const lowerCaseInput = input.toLowerCase();
-  return lowerCaseInput === 'yes' || lowerCaseInput === 'no';
+  return (typeof input === 'string') ? isYesNo.test(input) : false;
 };
