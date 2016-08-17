@@ -1,5 +1,5 @@
 'use strict';
 
-module.exports = function (value) {
-  return value === undefined || !`${value}`.trim();
+module.exports = function (input) {
+  return input === undefined || !`${input}`.trim();
 };

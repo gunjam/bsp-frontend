@@ -1,7 +1,9 @@
 'use strict';
-const ninoMatcher = /^(?!BG|GB|NK|KN|TN|NT|ZZ)[ABCEGHJ-PRSTW-Z]{2}\d{6}[A-D]$/i;
 
-module.exports = function (nino) {
-  const sanitised = `${nino}`.replace(/\s/g, '');
-  return ninoMatcher.test(sanitised);
+const validNino = /^(?!BG|GB|NK|KN|TN|NT|ZZ)[ABCEGHJ-PRSTW-Z]{2}\d{6}[A-D]$/i;
+const allSpaces = /\s/g;
+
+module.exports = function (input) {
+  const sanitised = `${input}`.replace(allSpaces, '');
+  return validNino.test(sanitised);
 };
