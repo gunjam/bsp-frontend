@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "body-parser": "^1.15.2",
+    "chai": "^3.5.0",
+    "cheerio": "^0.20.0",
     "compression": "^1.6.2",
     "connect-redis": "^3.1.0",
     "csurf": "^1.9.0",
@@ -20,7 +22,8 @@
     "lasso": "^2.5.5",
     "lasso-sass": "^1.1.9",
     "marko": "^3.7.1",
-    "marko-layout": "^2.0.2"
+    "marko-layout": "^2.0.2",
+    "mocha": "^3.0.2"
   },
   "devDependencies": {
     "xo": "^0.16.0"
@@ -29,7 +32,8 @@
     "space": true,
     "esnext": true,
     "env": [
-      "node"
+      "node",
+      "mocha"
     ],
     "ignores": [
       "static/**",
