@@ -3,6 +3,7 @@
 const renderForm = require('../../lib/render-form');
 const isEmpty = require('../../utils/is-empty');
 const isValidNino = require('../../utils/is-valid-nino');
+const isValidDateObject = require('../../utils/is-valid-date-object');
 const template = require('./template.marko');
 
 module.exports = {
@@ -24,7 +25,9 @@ module.exports = {
     }
 
     if (isEmpty(birth.day) || isEmpty(birth.month) || isEmpty(birth.year)) {
-      errors.birth = req.t('you:form.birth.error');
+      errors.birth = req.t('you:form.birth.errorEmpty');
+    } else if (!isValidDateObject(birth)) {
+      errors.birth = req.t('you:form.birth.errorInvalid');
     }
 
     if (Object.keys(errors).length > 0) {
