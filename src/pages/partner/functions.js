@@ -34,7 +34,7 @@ module.exports = {
       template.render({errors, values}, res);
     } else {
       const currentTime = new Date();
-      const dateOfDeath = new Date(`${death.day}/${death.month}/${death.year}`);
+      const dateOfDeath = new Date(death.year, death.month - 1, death.day);
       const daysFromDeath = (currentTime - dateOfDeath) / (1000 * 60 * 60 * 24);
       const deathOver12m = daysFromDeath > 365;
 
