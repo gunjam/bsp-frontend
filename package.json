@@ -1,5 +1,5 @@
 {
-  "name": "dwp-marko-example",
+  "name": "bsp-frontend",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,15 +8,14 @@
   "dependencies": {
     "body-parser": "^1.15.2",
     "chai": "^3.5.0",
-    "cheerio": "^0.20.0",
+    "cheerio": "^0.22.0",
     "compression": "^1.6.2",
     "connect-redis": "^3.1.0",
     "csurf": "^1.9.0",
-    "dwp-i18next-narko-components": "gunjam/dwp-i18next-narko-components",
-    "dwp-marko-components": "gunjam/dwp-marko-components",
     "express": "^4.14.0",
     "express-session": "^1.14.0",
-    "govuk-elements-sass": "^1.2.1",
+    "govuk-elements-sass": "^2.0.0",
+    "govuk-elements-marko": "gunjam/govuk-elements-marko",
     "govuk-template-marko": "gunjam/govuk-template-marko",
     "helmet": "^2.1.2",
     "i18next": "^3.3.1",
@@ -25,6 +24,7 @@
     "lasso": "^2.5.5",
     "lasso-sass": "^1.1.9",
     "marko": "^3.7.1",
+    "marko-i18next": "gunjam/marko-i18next",
     "marko-layout": "^2.0.2",
     "mocha": "^3.0.2"
   },
