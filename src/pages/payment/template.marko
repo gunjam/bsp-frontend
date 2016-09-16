@@ -17,11 +17,11 @@
 
     <form method="post" action="/payment">
 
-      <dwp-radios legend=i18n('payment:heading') name="type"
+      <gov-radios legend=i18n('payment:heading') name="type"
         error=data.errors.type value=data.values.type hide-legend=true>
-        <dwp-radios:radio label=i18n('payment:form.type.bankLabel') value="bank"/>
-        <dwp-radios:radio label=i18n('payment:form.type.buildingLabel') value="building"/>
-      </dwp-radios>
+        <gov-radios:radio label=i18n('payment:form.type.bankLabel') value="bank"/>
+        <gov-radios:radio label=i18n('payment:form.type.buildingLabel') value="building"/>
+      </gov-radios>
 
       <bsp-csrf-token/>
 

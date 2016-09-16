@@ -17,14 +17,14 @@
 
     <form method="post" action="/about-your-partner">
 
-      <dwp-input name="name" label=i18n('partner:form.name.label')
+      <gov-input name="name" label=i18n('partner:form.name.label')
         error=data.errors.name value=data.values.name/>
 
-      <dwp-input name="nino" label=i18n('partner:form.nino.label')
+      <gov-input name="nino" label=i18n('partner:form.nino.label')
         hint=i18n('partner:form.nino.hint') error=data.errors.nino
         value=data.values.nino/>
 
-      <dwp-date-input name="death" legend=i18n('partner:form.death.legend')
+      <gov-date-input name="death" legend=i18n('partner:form.death.legend')
         hint=i18n('partner:form.death.hint') error=data.errors.death
         value=data.values.death/>
 

@@ -20,10 +20,10 @@
     <form action="/${data.isBuildingSoc ? 'building-society' : 'bank'}-details"
       method="post">
 
-      <dwp-input name="account-name" label=i18n('bank:form.accountName.label')
+      <gov-input name="account-name" label=i18n('bank:form.accountName.label')
         error=data.errors['account-name'] value=data.values['account-name']/>
 
-      <dwp-input name="account-number" label=i18n('bank:form.accountNumber.label')
+      <gov-input name="account-number" label=i18n('bank:form.accountNumber.label')
         error=data.errors['account-number'] value=data.values['account-number']/>
 
       <bsp-sort-code-input error=data.errors['sort-code'] value=data.values/>
@@ -33,7 +33,7 @@
           <i18n-message key="bank:form.or"/>
         </p>
 
-        <dwp-input name="roll-number" label=i18n('bank:form.rollNumber.label')
+        <gov-input name="roll-number" label=i18n('bank:form.rollNumber.label')
           hint=i18n('bank:form.rollNumber.hint')/>
       </if>
 

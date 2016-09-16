@@ -13,23 +13,23 @@
 
     <form method="post" action="/eligibility">
 
-      <dwp-radios legend=i18n('eligibility:form.married.legend') name="married"
+      <gov-radios legend=i18n('eligibility:form.married.legend') name="married"
         error=data.errors.married value=data.values.married>
-        <dwp-radios:radio label=i18n('eligibility:form.married.labelYes') value="yes"/>
-        <dwp-radios:radio label=i18n('eligibility:form.married.labelNo') value="no"/>
-      </dwp-radios>
+        <gov-radios:radio label=i18n('eligibility:form.married.labelYes') value="yes"/>
+        <gov-radios:radio label=i18n('eligibility:form.married.labelNo') value="no"/>
+      </gov-radios>
 
-      <dwp-radios legend=i18n('eligibility:form.diedAfter.legend') name="date-of-death"
+      <gov-radios legend=i18n('eligibility:form.diedAfter.legend') name="date-of-death"
         error=data.errors['date-of-death'] value=data.values['date-of-death']>
-        <dwp-radios:radio label=i18n('eligibility:form.diedAfter.labelYes') value="yes"/>
-        <dwp-radios:radio label=i18n('eligibility:form.diedAfter.labelNo') value="no"/>
-      </dwp-radios>
+        <gov-radios:radio label=i18n('eligibility:form.diedAfter.labelYes') value="yes"/>
+        <gov-radios:radio label=i18n('eligibility:form.diedAfter.labelNo') value="no"/>
+      </gov-radios>
 
-      <dwp-radios legend=i18n('eligibility:form.inUK.legend') name="in-uk"
+      <gov-radios legend=i18n('eligibility:form.inUK.legend') name="in-uk"
         error=data.errors['in-uk'] value=data.values['in-uk']>
-        <dwp-radios:radio label=i18n('eligibility:form.inUK.labelYes') value="yes"/>
-        <dwp-radios:radio label=i18n('eligibility:form.inUK.labelNo') value="no"/>
-      </dwp-radios>
+        <gov-radios:radio label=i18n('eligibility:form.inUK.labelYes') value="yes"/>
+        <gov-radios:radio label=i18n('eligibility:form.inUK.labelNo') value="no"/>
+      </gov-radios>
 
       <bsp-csrf-token/>
 
