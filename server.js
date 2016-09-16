@@ -3,14 +3,13 @@ require('marko/node-require').install();
 
 const bodyParser = require('body-parser');
 const compression = require('compression');
+const cookieSession = require('cookie-session')
 const csrf = require('csurf');
 const express = require('express');
 const helmet = require('helmet');
 const i18next = require('i18next');
 const FilesystemBackend = require('i18next-node-fs-backend');
 const i18nextMiddleware = require('i18next-express-middleware');
-const session = require('express-session');
-const RedisStore = require('connect-redis')(session);
 const sessionHelpers = require('./src/lib/session-helpers');
 
 // Configure Lasso.js
@@ -41,11 +40,11 @@ app.get('/ping', (req, res) => {
 app.use(require('lasso/middleware').serveStatic());
 
 // Setup redis session
-const sessionConfig = require('./config/session');
-sessionConfig.store = new RedisStore(require('./config/redis'));
-
 app.set('trust proxy', 1);
-app.use(session(sessionConfig));
+app.use(cookieSession({
+  name: 'session',
+  keys: ['key1', 'key2']
+}));
 app.use(sessionHelpers);
 
 // Load Middleware
