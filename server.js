@@ -3,7 +3,7 @@ require('marko/node-require').install();
 
 const bodyParser = require('body-parser');
 const compression = require('compression');
-const cookieSession = require('cookie-session')
+const cookieSession = require('cookie-session');
 const csrf = require('csurf');
 const express = require('express');
 const helmet = require('helmet');
