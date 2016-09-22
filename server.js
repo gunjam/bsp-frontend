@@ -71,7 +71,7 @@ app.use('/dependent-children', require('./src/pages/children'));
 app.use('/payment', require('./src/pages/payment'));
 app.use('/bank-details', require('./src/pages/bank'));
 app.use('/building-society-details', require('./src/pages/bank'));
-app.get('/declaration', require('./src/pages/declaration'));
+app.use('/declaration', require('./src/pages/declaration'));
 app.get('/end', require('./src/pages/end'));
 
 // Error pages

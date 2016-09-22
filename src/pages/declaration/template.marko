@@ -22,11 +22,13 @@
 
     <gov-legal content=i18n('declaration:warning')/>
 
-    <p>
-      <a href="/end" class="button" role="button">
+    <form action="/declaration" method="post">
+      <bsp-csrf-token/>
+
+      <button class="button">
         <i18n-message key="declaration:agree"/>
-      </a>
-    </p>
+      </button>
+    </form>
 
   </layout-put>
 

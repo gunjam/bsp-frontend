@@ -14,8 +14,8 @@
     "csurf": "^1.9.0",
     "express": "^4.14.0",
     "express-session": "^1.14.0",
-    "govuk-elements-sass": "^2.0.0",
     "govuk-elements-marko": "gunjam/govuk-elements-marko",
+    "govuk-elements-sass": "^2.0.0",
     "govuk-template-marko": "gunjam/govuk-template-marko",
     "helmet": "^2.1.2",
     "i18next": "^3.3.1",
@@ -26,7 +26,9 @@
     "marko": "^3.7.1",
     "marko-i18next": "gunjam/marko-i18next",
     "marko-layout": "^2.0.2",
-    "mocha": "^3.0.2"
+    "mocha": "^3.0.2",
+    "request": "^2.75.0",
+    "request-promise": "^4.1.1"
   },
   "devDependencies": {
     "xo": "^0.16.0"

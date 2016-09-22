@@ -20,20 +20,20 @@
     <form action="/${data.isBuildingSoc ? 'building-society' : 'bank'}-details"
       method="post">
 
-      <gov-input name="account-name" label=i18n('bank:form.accountName.label')
-        error=data.errors['account-name'] value=data.values['account-name']/>
+      <gov-input name="accountName" label=i18n('bank:form.accountName.label')
+        error=data.errors.accountName value=data.values.accountName/>
 
-      <gov-input name="account-number" label=i18n('bank:form.accountNumber.label')
-        error=data.errors['account-number'] value=data.values['account-number']/>
+      <gov-input name="accountNumber" label=i18n('bank:form.accountNumber.label')
+        error=data.errors.accountNumber value=data.values.accountNumber/>
 
-      <bsp-sort-code-input error=data.errors['sort-code'] value=data.values/>
+      <bsp-sort-code-input error=data.errors.sortCode value=data.values/>
 
       <if(data.isBuildingSoc)>
         <p>
           <i18n-message key="bank:form.or"/>
         </p>
 
-        <gov-input name="roll-number" label=i18n('bank:form.rollNumber.label')
+        <gov-input name="rollNumber" label=i18n('bank:form.rollNumber.label')
           hint=i18n('bank:form.rollNumber.hint')/>
       </if>
 

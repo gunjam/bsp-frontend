@@ -15,20 +15,20 @@ module.exports = {
     const errors = {};
     const values = req.body;
 
-    if (isEmpty(values['account-name'])) {
-      errors['account-name'] = req.t('bank:form.accountName.error');
+    if (isEmpty(values.accountName)) {
+      errors.accountName = req.t('bank:form.accountName.error');
     }
 
-    if (isEmpty(values['account-number'])) {
-      errors['account-number'] = req.t('bank:form.accountNumber.errorBlank');
-    } else if (!isNumeric(values['account-number'])) {
-      errors['account-number'] = req.t('bank:form.accountNumber.errorInvalid');
+    if (isEmpty(values.accountNumber)) {
+      errors.accountNumber = req.t('bank:form.accountNumber.errorBlank');
+    } else if (!isNumeric(values.accountNumber)) {
+      errors.accountNumber = req.t('bank:form.accountNumber.errorInvalid');
     }
 
-    if (isEmpty(values['sort-code-1']) ||
-        isEmpty(values['sort-code-2']) ||
-        isEmpty(values['sort-code-3'])) {
-      errors['sort-code'] = req.t('bank:form.sortCode.error');
+    if (isEmpty(values.sortCode1) ||
+        isEmpty(values.sortCode2) ||
+        isEmpty(values.sortCode3)) {
+      errors.sortCode = req.t('bank:form.sortCode.error');
     }
 
     if (Object.keys(errors).length > 0) {

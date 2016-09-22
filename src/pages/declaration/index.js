@@ -1,8 +1,11 @@
 'use strict';
 
-const template = require('./template.marko');
+const express = require('express');
+const {get, post} = require('./functions');
 
-module.exports = function (req, res) {
-  const type = req.getSession('payment').type;
-  template.render({type}, res);
-};
+const router = new express.Router();
+
+router.get('/', get);
+router.post('/', post);
+
+module.exports = router;
