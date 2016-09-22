@@ -22,7 +22,7 @@ module.exports = {
     rp(request)
       .then(() => {
         req.session.destroy();
-        res.redirect('/end');
+        res.redirect('/application-received');
       })
       .catch(err => next(err));
   }

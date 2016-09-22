@@ -72,7 +72,7 @@ app.use('/payment', require('./src/pages/payment'));
 app.use('/bank-details', require('./src/pages/bank'));
 app.use('/building-society-details', require('./src/pages/bank'));
 app.use('/declaration', require('./src/pages/declaration'));
-app.get('/end', require('./src/pages/end'));
+app.get('/application-received', require('./src/pages/end'));
 
 // Error pages
 app.use(require('./src/pages/404'));
