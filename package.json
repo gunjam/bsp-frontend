@@ -2,6 +2,9 @@
   "name": "bsp-frontend",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node" : ">6.0.0"
+  },
   "scripts": {
     "test": "xo && mocha src/test"
   },
