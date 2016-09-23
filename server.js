@@ -74,6 +74,9 @@ app.use('/building-society-details', require('./src/pages/bank'));
 app.use('/declaration', require('./src/pages/declaration'));
 app.get('/application-received', require('./src/pages/end'));
 
+// Redirect root to start page
+app.get('/', (req, res) => res.redirect('/start'));
+
 // Error pages
 app.use(require('./src/pages/404'));
 app.use(require('./src/pages/500'));
