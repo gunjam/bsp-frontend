@@ -10,7 +10,7 @@ module.exports = {
   post(req, res) {
     const values = req.body;
 
-    if (isYesOrNo(values.children)) {
+    if (isYesOrNo(values.dependantChildren)) {
       res.setSessionAndRedirect('children', values, '/payment');
     } else {
       const errors = {children: req.t('children:form.haveChildren.error')};

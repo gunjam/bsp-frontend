@@ -2,6 +2,9 @@
   "name": "bsp-frontend",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node" : ">6.0.0"
+  },
   "scripts": {
     "test": "xo && mocha src/test"
   },
@@ -25,7 +28,9 @@
     "marko": "^3.7.1",
     "marko-i18next": "gunjam/marko-i18next",
     "marko-layout": "^2.0.2",
-    "mocha": "^3.0.2"
+    "mocha": "^3.0.2",
+    "request": "^2.75.0",
+    "request-promise": "^4.1.1"
   },
   "devDependencies": {
     "xo": "^0.16.0"

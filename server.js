@@ -22,7 +22,7 @@ i18next
   .init(require('./config/i18next'));
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // Enable compression
 app.use(compression());
@@ -70,8 +70,11 @@ app.use('/dependent-children', require('./src/pages/children'));
 app.use('/payment', require('./src/pages/payment'));
 app.use('/bank-details', require('./src/pages/bank'));
 app.use('/building-society-details', require('./src/pages/bank'));
-app.get('/declaration', require('./src/pages/declaration'));
-app.get('/end', require('./src/pages/end'));
+app.use('/declaration', require('./src/pages/declaration'));
+app.get('/application-received', require('./src/pages/end'));
+
+// Redirect root to start page
+app.get('/', (req, res) => res.redirect('/start'));
 
 // Error pages
 app.use(require('./src/pages/404'));
