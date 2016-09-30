@@ -1,5 +1,7 @@
 'use strict';
+
 require('marko/node-require').install();
+require('require-self-ref');
 
 const bodyParser = require('body-parser');
 const compression = require('compression');

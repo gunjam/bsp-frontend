@@ -1,9 +1,9 @@
 'use strict';
 
-const renderForm = require('../../lib/render-form');
-const isEmpty = require('../../utils/is-empty');
-const isValidNino = require('../../utils/is-valid-nino');
-const isValidDateObject = require('../../utils/is-valid-date-object');
+const renderForm = require('~/src/lib/render-form');
+const isEmpty = require('~/src/utils/is-empty');
+const isValidNino = require('~/src/utils/is-valid-nino');
+const isValidDateObject = require('~/src/utils/is-valid-date-object');
 const template = require('./template.marko');
 
 module.exports = {

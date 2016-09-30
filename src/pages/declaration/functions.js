@@ -1,8 +1,8 @@
 'use strict';
 
 const rp = require('request-promise');
-const config = require('../../../config/app');
-const sessionToClaimObject = require('../../lib/session-to-claim-object');
+const config = require('~/config/app');
+const sessionToClaimObject = require('~/src/lib/session-to-claim-object');
 const template = require('./template.marko');
 
 const method = 'PUT';

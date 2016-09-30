@@ -1,6 +1,6 @@
 'use strict';
 
-const getDateFromDateObject = require('../utils/get-date-from-date-object');
+const getDateFromDateObject = require('~/src/utils/get-date-from-date-object');
 
 module.exports = function (session) {
   const {you, partner, contact, children, bank} = session;

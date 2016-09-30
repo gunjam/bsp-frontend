@@ -1,7 +1,7 @@
 'use strict';
 
-const renderForm = require('../../lib/render-form');
-const isEmpty = require('../../utils/is-empty');
+const renderForm = require('~/src/lib/render-form');
+const isEmpty = require('~/src/utils/is-empty');
 const template = require('./template.marko');
 
 module.exports = {

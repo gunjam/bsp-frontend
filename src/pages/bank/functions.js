@@ -1,7 +1,7 @@
 'use strict';
 
-const isEmpty = require('../../utils/is-empty');
-const isNumeric = require('../../utils/is-numeric');
+const isEmpty = require('~/src/utils/is-empty');
+const isNumeric = require('~/src/utils/is-numeric');
 const template = require('./template.marko');
 
 module.exports = {
