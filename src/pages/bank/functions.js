@@ -1,5 +1,6 @@
 'use strict';
 
+const hasErrors = require('~/src/utils/has-errors');
 const isEmpty = require('~/src/utils/is-empty');
 const isNumeric = require('~/src/utils/is-numeric');
 const template = require('./template.marko');
@@ -31,7 +32,7 @@ module.exports = {
       errors.sortCode = req.t('bank:form.sortCode.error');
     }
 
-    if (Object.keys(errors).length > 0) {
+    if (hasErrors(errors)) {
       const isBuildingSoc = (req.originalUrl === '/building-society-details');
       template.render({errors, values, isBuildingSoc}, res);
     } else {

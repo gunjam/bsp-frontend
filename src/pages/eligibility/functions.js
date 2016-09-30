@@ -1,6 +1,7 @@
 'use strict';
 
 const renderForm = require('~/src/lib/render-form');
+const hasErrors = require('~/src/utils/has-errors');
 const isYesOrNo = require('~/src/utils/is-yes-or-no');
 const template = require('./template.marko');
 
@@ -21,7 +22,7 @@ module.exports = {
       errors.inUK = req.t('eligibility:form.inUK.error');
     }
 
-    if (Object.keys(errors).length > 0) {
+    if (hasErrors(errors)) {
       template.render({errors, values}, res);
     } else {
       const notMarried = (values.married === 'no');

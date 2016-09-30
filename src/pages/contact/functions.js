@@ -1,6 +1,7 @@
 'use strict';
 
 const renderForm = require('~/src/lib/render-form');
+const hasErrors = require('~/src/utils/has-errors');
 const isEmpty = require('~/src/utils/is-empty');
 const template = require('./template.marko');
 
@@ -26,7 +27,7 @@ module.exports = {
       errors.telephone = req.t('contact:form.telephone.error');
     }
 
-    if (Object.keys(errors).length > 0) {
+    if (hasErrors(errors)) {
       template.render({errors, values}, res);
     } else {
       res.setSessionAndRedirect('contact', values, '/dependent-children');

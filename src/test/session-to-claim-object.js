@@ -1,5 +1,7 @@
 'use strict';
 
+require('require-self-ref');
+
 const {expect} = require('chai');
 const sessionToClaimObject = require('../lib/session-to-claim-object');
 

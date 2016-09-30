@@ -1,6 +1,7 @@
 'use strict';
 
 const renderForm = require('~/src/lib/render-form');
+const hasErrors = require('~/src/utils/has-errors');
 const isEmpty = require('~/src/utils/is-empty');
 const isValidNino = require('~/src/utils/is-valid-nino');
 const isValidDateObject = require('~/src/utils/is-valid-date-object');
@@ -30,7 +31,7 @@ module.exports = {
       errors.birth = req.t('you:form.birth.errorInvalid');
     }
 
-    if (Object.keys(errors).length > 0) {
+    if (hasErrors(errors)) {
       template.render({errors, values}, res);
     } else {
       res.setSessionAndRedirect('you', values, '/contact-details');
